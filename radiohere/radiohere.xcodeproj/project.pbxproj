@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9728CB7B1972E27600B76241 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9728CB7A1972E27600B76241 /* Track.swift */; };
+		9728CB7D1972EA9300B76241 /* next_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728CB7C1972EA9300B76241 /* next_blue.png */; };
+		9728CB7F1972EC0700B76241 /* media-fast-forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728CB7E1972EC0700B76241 /* media-fast-forward.png */; };
+		9765D152197053FD00ECD5A2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D151197053FD00ECD5A2 /* DetailViewController.swift */; };
+		9765D1541970540400ECD5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9765D1531970540400ECD5A2 /* Main.storyboard */; };
+		9765D1801970A34A00ECD5A2 /* GigCalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D17F1970A34A00ECD5A2 /* GigCalendarController.swift */; };
+		9765D18C197194EC00ECD5A2 /* TSQCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9765D185197194EC00ECD5A2 /* TSQCalendarCell.m */; };
+		9765D18D197194EC00ECD5A2 /* TSQCalendarMonthHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9765D187197194EC00ECD5A2 /* TSQCalendarMonthHeaderCell.m */; };
+		9765D18E197194EC00ECD5A2 /* TSQCalendarRowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9765D189197194EC00ECD5A2 /* TSQCalendarRowCell.m */; };
+		9765D18F197194EC00ECD5A2 /* TSQCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9765D18B197194EC00ECD5A2 /* TSQCalendarView.m */; };
+		9765D19419727E2900ECD5A2 /* Hungama-Free-Music-Videos-Radio-1-120x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9765D19219727E2900ECD5A2 /* Hungama-Free-Music-Videos-Radio-1-120x120.jpg */; };
+		9765D19519727E2900ECD5A2 /* play80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9765D19319727E2900ECD5A2 /* play80.jpg */; };
+		9765D1991972A33F00ECD5A2 /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9765D1981972A33F00ECD5A2 /* PlayerView.xib */; };
+		9765D19B1972C1AE00ECD5A2 /* PlaylistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D19A1972C1AE00ECD5A2 /* PlaylistController.swift */; };
+		977A7D84194D7C7600EBE53A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977A7D83194D7C7600EBE53A /* AppDelegate.swift */; };
+		977A7D8B194D7C7600EBE53A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 977A7D8A194D7C7600EBE53A /* Images.xcassets */; };
+		977A7D97194D7C7600EBE53A /* radiohereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977A7D96194D7C7600EBE53A /* radiohereTests.swift */; };
+		97A30F41194DB547006FB314 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F40194DB547006FB314 /* SRWebSocket.m */; };
+		97A30F47194DB566006FB314 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F42194DB566006FB314 /* base64.c */; };
+		97A30F48194DB566006FB314 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F45194DB566006FB314 /* NSData+SRB64Additions.m */; };
+		97A30F4A194DB654006FB314 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A30F49194DB654006FB314 /* libicucore.dylib */; };
+		97A30F4C194DB664006FB314 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A30F4B194DB664006FB314 /* CFNetwork.framework */; };
+		97A30F4E194DB66E006FB314 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A30F4D194DB66E006FB314 /* Security.framework */; };
+		97A30F50194DB675006FB314 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A30F4F194DB675006FB314 /* Foundation.framework */; };
+		97A30F52194DD739006FB314 /* Gig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F51194DD738006FB314 /* Gig.swift */; };
+		97A30F54194DDEF9006FB314 /* NSDateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F53194DDEF9006FB314 /* NSDateExt.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		977A7D91194D7C7600EBE53A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 977A7D76194D7C7600EBE53A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 977A7D7D194D7C7600EBE53A;
+			remoteInfo = radiohere;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9728CB7A1972E27600B76241 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		9728CB7C1972EA9300B76241 /* next_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_blue.png; sourceTree = "<group>"; };
+		9728CB7E1972EC0700B76241 /* media-fast-forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "media-fast-forward.png"; sourceTree = "<group>"; };
+		9765D151197053FD00ECD5A2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9765D1531970540400ECD5A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9765D17F1970A34A00ECD5A2 /* GigCalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GigCalendarController.swift; sourceTree = "<group>"; };
+		9765D182197194EC00ECD5A2 /* TimesSquare-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TimesSquare-Prefix.pch"; sourceTree = "<group>"; };
+		9765D183197194EC00ECD5A2 /* TimesSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimesSquare.h; sourceTree = "<group>"; };
+		9765D184197194EC00ECD5A2 /* TSQCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarCell.h; sourceTree = "<group>"; };
+		9765D185197194EC00ECD5A2 /* TSQCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarCell.m; sourceTree = "<group>"; };
+		9765D186197194EC00ECD5A2 /* TSQCalendarMonthHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarMonthHeaderCell.h; sourceTree = "<group>"; };
+		9765D187197194EC00ECD5A2 /* TSQCalendarMonthHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarMonthHeaderCell.m; sourceTree = "<group>"; };
+		9765D188197194EC00ECD5A2 /* TSQCalendarRowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarRowCell.h; sourceTree = "<group>"; };
+		9765D189197194EC00ECD5A2 /* TSQCalendarRowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarRowCell.m; sourceTree = "<group>"; };
+		9765D18A197194EC00ECD5A2 /* TSQCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarView.h; sourceTree = "<group>"; };
+		9765D18B197194EC00ECD5A2 /* TSQCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarView.m; sourceTree = "<group>"; };
+		9765D19219727E2900ECD5A2 /* Hungama-Free-Music-Videos-Radio-1-120x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Hungama-Free-Music-Videos-Radio-1-120x120.jpg"; sourceTree = "<group>"; };
+		9765D19319727E2900ECD5A2 /* play80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play80.jpg; sourceTree = "<group>"; };
+		9765D1981972A33F00ECD5A2 /* PlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
+		9765D19A1972C1AE00ECD5A2 /* PlaylistController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistController.swift; sourceTree = "<group>"; };
+		977A7D7E194D7C7600EBE53A /* radiohere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radiohere.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		977A7D82194D7C7600EBE53A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		977A7D83194D7C7600EBE53A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		977A7D8A194D7C7600EBE53A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		977A7D90194D7C7600EBE53A /* radiohereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = radiohereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		977A7D95194D7C7600EBE53A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		977A7D96194D7C7600EBE53A /* radiohereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radiohereTests.swift; sourceTree = "<group>"; };
+		97A30F3E194DB547006FB314 /* radiohere-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "radiohere-Bridging-Header.h"; sourceTree = "<group>"; };
+		97A30F3F194DB547006FB314 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		97A30F40194DB547006FB314 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		97A30F42194DB566006FB314 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		97A30F43194DB566006FB314 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		97A30F44194DB566006FB314 /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		97A30F45194DB566006FB314 /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		97A30F46194DB566006FB314 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		97A30F49194DB654006FB314 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		97A30F4B194DB664006FB314 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		97A30F4D194DB66E006FB314 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		97A30F4F194DB675006FB314 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		97A30F51194DD738006FB314 /* Gig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gig.swift; sourceTree = "<group>"; };
+		97A30F53194DDEF9006FB314 /* NSDateExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExt.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		977A7D7B194D7C7600EBE53A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97A30F50194DB675006FB314 /* Foundation.framework in Frameworks */,
+				97A30F4E194DB66E006FB314 /* Security.framework in Frameworks */,
+				97A30F4C194DB664006FB314 /* CFNetwork.framework in Frameworks */,
+				97A30F4A194DB654006FB314 /* libicucore.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		977A7D8D194D7C7600EBE53A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9765D181197194EC00ECD5A2 /* TimesSquare */ = {
+			isa = PBXGroup;
+			children = (
+				9765D182197194EC00ECD5A2 /* TimesSquare-Prefix.pch */,
+				9765D183197194EC00ECD5A2 /* TimesSquare.h */,
+				9765D184197194EC00ECD5A2 /* TSQCalendarCell.h */,
+				9765D185197194EC00ECD5A2 /* TSQCalendarCell.m */,
+				9765D186197194EC00ECD5A2 /* TSQCalendarMonthHeaderCell.h */,
+				9765D187197194EC00ECD5A2 /* TSQCalendarMonthHeaderCell.m */,
+				9765D188197194EC00ECD5A2 /* TSQCalendarRowCell.h */,
+				9765D189197194EC00ECD5A2 /* TSQCalendarRowCell.m */,
+				9765D18A197194EC00ECD5A2 /* TSQCalendarView.h */,
+				9765D18B197194EC00ECD5A2 /* TSQCalendarView.m */,
+			);
+			path = TimesSquare;
+			sourceTree = "<group>";
+		};
+		977A7D75194D7C7600EBE53A = {
+			isa = PBXGroup;
+			children = (
+				9765D181197194EC00ECD5A2 /* TimesSquare */,
+				97A30F4F194DB675006FB314 /* Foundation.framework */,
+				97A30F4D194DB66E006FB314 /* Security.framework */,
+				97A30F4B194DB664006FB314 /* CFNetwork.framework */,
+				97A30F49194DB654006FB314 /* libicucore.dylib */,
+				977A7D80194D7C7600EBE53A /* radiohere */,
+				977A7D93194D7C7600EBE53A /* radiohereTests */,
+				977A7D7F194D7C7600EBE53A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		977A7D7F194D7C7600EBE53A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				977A7D7E194D7C7600EBE53A /* radiohere.app */,
+				977A7D90194D7C7600EBE53A /* radiohereTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		977A7D80194D7C7600EBE53A /* radiohere */ = {
+			isa = PBXGroup;
+			children = (
+				9765D1531970540400ECD5A2 /* Main.storyboard */,
+				97A30F51194DD738006FB314 /* Gig.swift */,
+				9728CB7A1972E27600B76241 /* Track.swift */,
+				9765D17F1970A34A00ECD5A2 /* GigCalendarController.swift */,
+				9765D151197053FD00ECD5A2 /* DetailViewController.swift */,
+				97A30F42194DB566006FB314 /* base64.c */,
+				97A30F43194DB566006FB314 /* base64.h */,
+				97A30F44194DB566006FB314 /* NSData+SRB64Additions.h */,
+				97A30F45194DB566006FB314 /* NSData+SRB64Additions.m */,
+				97A30F46194DB566006FB314 /* SocketRocket-Prefix.pch */,
+				97A30F3F194DB547006FB314 /* SRWebSocket.h */,
+				97A30F40194DB547006FB314 /* SRWebSocket.m */,
+				977A7D83194D7C7600EBE53A /* AppDelegate.swift */,
+				977A7D8A194D7C7600EBE53A /* Images.xcassets */,
+				977A7D81194D7C7600EBE53A /* Supporting Files */,
+				97A30F3E194DB547006FB314 /* radiohere-Bridging-Header.h */,
+				97A30F53194DDEF9006FB314 /* NSDateExt.swift */,
+				9765D1981972A33F00ECD5A2 /* PlayerView.xib */,
+				9765D19A1972C1AE00ECD5A2 /* PlaylistController.swift */,
+			);
+			path = radiohere;
+			sourceTree = "<group>";
+		};
+		977A7D81194D7C7600EBE53A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9728CB7E1972EC0700B76241 /* media-fast-forward.png */,
+				9728CB7C1972EA9300B76241 /* next_blue.png */,
+				9765D19219727E2900ECD5A2 /* Hungama-Free-Music-Videos-Radio-1-120x120.jpg */,
+				9765D19319727E2900ECD5A2 /* play80.jpg */,
+				977A7D82194D7C7600EBE53A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		977A7D93194D7C7600EBE53A /* radiohereTests */ = {
+			isa = PBXGroup;
+			children = (
+				977A7D96194D7C7600EBE53A /* radiohereTests.swift */,
+				977A7D94194D7C7600EBE53A /* Supporting Files */,
+			);
+			path = radiohereTests;
+			sourceTree = "<group>";
+		};
+		977A7D94194D7C7600EBE53A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				977A7D95194D7C7600EBE53A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		977A7D7D194D7C7600EBE53A /* radiohere */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 977A7D9A194D7C7600EBE53A /* Build configuration list for PBXNativeTarget "radiohere" */;
+			buildPhases = (
+				977A7D7A194D7C7600EBE53A /* Sources */,
+				977A7D7B194D7C7600EBE53A /* Frameworks */,
+				977A7D7C194D7C7600EBE53A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = radiohere;
+			productName = radiohere;
+			productReference = 977A7D7E194D7C7600EBE53A /* radiohere.app */;
+			productType = "com.apple.product-type.application";
+		};
+		977A7D8F194D7C7600EBE53A /* radiohereTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 977A7D9D194D7C7600EBE53A /* Build configuration list for PBXNativeTarget "radiohereTests" */;
+			buildPhases = (
+				977A7D8C194D7C7600EBE53A /* Sources */,
+				977A7D8D194D7C7600EBE53A /* Frameworks */,
+				977A7D8E194D7C7600EBE53A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				977A7D92194D7C7600EBE53A /* PBXTargetDependency */,
+			);
+			name = radiohereTests;
+			productName = radiohereTests;
+			productReference = 977A7D90194D7C7600EBE53A /* radiohereTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		977A7D76194D7C7600EBE53A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Spencer Ward";
+				TargetAttributes = {
+					977A7D7D194D7C7600EBE53A = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = YWXKS4E5M8;
+					};
+					977A7D8F194D7C7600EBE53A = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 977A7D7D194D7C7600EBE53A;
+					};
+				};
+			};
+			buildConfigurationList = 977A7D79194D7C7600EBE53A /* Build configuration list for PBXProject "radiohere" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 977A7D75194D7C7600EBE53A;
+			productRefGroup = 977A7D7F194D7C7600EBE53A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				977A7D7D194D7C7600EBE53A /* radiohere */,
+				977A7D8F194D7C7600EBE53A /* radiohereTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		977A7D7C194D7C7600EBE53A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9765D1541970540400ECD5A2 /* Main.storyboard in Resources */,
+				9765D19519727E2900ECD5A2 /* play80.jpg in Resources */,
+				9728CB7D1972EA9300B76241 /* next_blue.png in Resources */,
+				977A7D8B194D7C7600EBE53A /* Images.xcassets in Resources */,
+				9765D19419727E2900ECD5A2 /* Hungama-Free-Music-Videos-Radio-1-120x120.jpg in Resources */,
+				9765D1991972A33F00ECD5A2 /* PlayerView.xib in Resources */,
+				9728CB7F1972EC0700B76241 /* media-fast-forward.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		977A7D8E194D7C7600EBE53A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		977A7D7A194D7C7600EBE53A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9765D152197053FD00ECD5A2 /* DetailViewController.swift in Sources */,
+				9765D1801970A34A00ECD5A2 /* GigCalendarController.swift in Sources */,
+				9765D18D197194EC00ECD5A2 /* TSQCalendarMonthHeaderCell.m in Sources */,
+				97A30F52194DD739006FB314 /* Gig.swift in Sources */,
+				97A30F48194DB566006FB314 /* NSData+SRB64Additions.m in Sources */,
+				9765D18E197194EC00ECD5A2 /* TSQCalendarRowCell.m in Sources */,
+				97A30F41194DB547006FB314 /* SRWebSocket.m in Sources */,
+				9765D18F197194EC00ECD5A2 /* TSQCalendarView.m in Sources */,
+				97A30F47194DB566006FB314 /* base64.c in Sources */,
+				977A7D84194D7C7600EBE53A /* AppDelegate.swift in Sources */,
+				9728CB7B1972E27600B76241 /* Track.swift in Sources */,
+				97A30F54194DDEF9006FB314 /* NSDateExt.swift in Sources */,
+				9765D18C197194EC00ECD5A2 /* TSQCalendarCell.m in Sources */,
+				9765D19B1972C1AE00ECD5A2 /* PlaylistController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		977A7D8C194D7C7600EBE53A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				977A7D97194D7C7600EBE53A /* radiohereTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		977A7D92194D7C7600EBE53A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 977A7D7D194D7C7600EBE53A /* radiohere */;
+			targetProxy = 977A7D91194D7C7600EBE53A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		977A7D98194D7C7600EBE53A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		977A7D99194D7C7600EBE53A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		977A7D9B194D7C7600EBE53A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = radiohere/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "radiohere/radiohere-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = Externals/SocketRocket;
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "Externals/SocketRocket/**";
+			};
+			name = Debug;
+		};
+		977A7D9C194D7C7600EBE53A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = radiohere/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "radiohere/radiohere-Bridging-Header.h";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "Externals/SocketRocket/**";
+			};
+			name = Release;
+		};
+		977A7D9E194D7C7600EBE53A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/radiohere.app/radiohere";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = radiohereTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		977A7D9F194D7C7600EBE53A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/radiohere.app/radiohere";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = radiohereTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		977A7D79194D7C7600EBE53A /* Build configuration list for PBXProject "radiohere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				977A7D98194D7C7600EBE53A /* Debug */,
+				977A7D99194D7C7600EBE53A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		977A7D9A194D7C7600EBE53A /* Build configuration list for PBXNativeTarget "radiohere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				977A7D9B194D7C7600EBE53A /* Debug */,
+				977A7D9C194D7C7600EBE53A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		977A7D9D194D7C7600EBE53A /* Build configuration list for PBXNativeTarget "radiohereTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				977A7D9E194D7C7600EBE53A /* Debug */,
+				977A7D9F194D7C7600EBE53A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 977A7D76194D7C7600EBE53A /* Project object */;
+}

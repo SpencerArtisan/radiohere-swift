@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "radiohere.ViewController.tableView (radiohere.ViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UITableView&gt;, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int:ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "artists">
+            </PersistentString>
+            <PersistentString
+               value = "artists.count">
+            </PersistentString>
+            <PersistentString
+               value = "(Swift.Dictionary&lt;Swift.String, Swift.Array&lt;radiohere.Artist&gt;&gt;)self.tableData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "radiohere.ViewController.webSocket (radiohere.ViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SRWebSocket&gt;, didReceiveMessage : Swift.AnyObject) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "artists">
+            </PersistentString>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "radiohere.DetailViewController.update (radiohere.DetailViewController)() -&gt; ():DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "detailItem[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
