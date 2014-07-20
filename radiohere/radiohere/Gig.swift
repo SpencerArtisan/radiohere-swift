@@ -20,6 +20,10 @@ class Gig {
         return json["artist"] as String
     }
     
+    func songkickUrl() -> String {
+        return json["songkickUrl"] as String
+    }
+    
     func venue() -> String {
         return json["venueName"] as String
     }

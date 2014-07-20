@@ -11,13 +11,14 @@ import AVFoundation
 
 class DetailViewController: UITableViewController {
     var audioPlayer = AVPlayer()
-    var playinggig : Gig?
+    var selected : Gig?
     var trackIndex = 0
     var timer : NSTimer = NSTimer()
     
     @IBOutlet var myPlayer: UIView
     @IBOutlet var songTitle: UILabel
     @IBOutlet var nextTrack: UIButton
+    @IBOutlet var tickets: UIButton
     
     var gigs: NSMutableArray = NSMutableArray() {
         didSet {
@@ -25,10 +26,16 @@ class DetailViewController: UITableViewController {
             self.configureView()
         }
     }
+    
+    @IBAction func touchTickets(sender: AnyObject) {
+        let secondViewController = self.storyboard.instantiateViewControllerWithIdentifier("SongkickViewController") as SongkickViewController
+        secondViewController.url = selected?.songkickUrl()
+        self.navigationController.pushViewController(secondViewController, animated: true)
+    }
 
     @IBAction func touchNext(sender: AnyObject) {
         trackIndex++
-        if (playinggig?.tracks().count <= trackIndex) {
+        if (selected?.tracks().count <= trackIndex) {
             trackIndex = 0
         }
         playTrack()
@@ -42,15 +49,16 @@ class DetailViewController: UITableViewController {
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath
         indexPath: NSIndexPath!) {
         trackIndex = 0
-        playinggig = gigs[indexPath.row] as Gig
+        selected = gigs[indexPath.row] as Gig
         playTrack()
     }
     
     func playTrack() {
-        audioPlayer = AVPlayer(URL: playinggig!.tracks()[trackIndex].streamUrl())
+        audioPlayer = AVPlayer(URL: selected!.tracks()[trackIndex].streamUrl())
         audioPlayer.play()
-        songTitle.text = playinggig!.tracks()[trackIndex].name()
+        songTitle.text = selected!.tracks()[trackIndex].name()
         nextTrack.hidden = false
+        tickets.hidden = false
     }
 
     override func viewDidLoad() {
@@ -78,8 +86,8 @@ class DetailViewController: UITableViewController {
     override func viewDidDisappear(animated: Bool) {
         println("KILLING DETAIL VIEW \(self)")
         audioPlayer.pause()
-        gigs = NSMutableArray()
-        timer.invalidate()
+//        gigs = NSMutableArray()
+//        timer.invalidate()
     }
 
     override func didReceiveMemoryWarning() {

@@ -33,6 +33,17 @@
 		97A30F50194DB675006FB314 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A30F4F194DB675006FB314 /* Foundation.framework */; };
 		97A30F52194DD739006FB314 /* Gig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F51194DD738006FB314 /* Gig.swift */; };
 		97A30F54194DDEF9006FB314 /* NSDateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F53194DDEF9006FB314 /* NSDateExt.swift */; };
+		97C254E5197B06FC00B1A8F1 /* SongkickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C254E4197B06FC00B1A8F1 /* SongkickViewController.swift */; };
+		97C254EB197B0CBE00B1A8F1 /* tickets.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254EA197B0CBE00B1A8F1 /* tickets.jpg */; };
+		97C254ED197B0CF600B1A8F1 /* tickets_small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254EC197B0CF600B1A8F1 /* tickets_small.jpg */; };
+		97C254EF197B0F5300B1A8F1 /* tickets_png.png in Resources */ = {isa = PBXBuildFile; fileRef = 97C254EE197B0F5300B1A8F1 /* tickets_png.png */; };
+		97C254F1197B1F0300B1A8F1 /* loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254F0197B1F0300B1A8F1 /* loading.jpg */; };
+		97C254F3197B21AF00B1A8F1 /* songkick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254F2197B21AF00B1A8F1 /* songkick.jpg */; };
+		97C254F5197B224A00B1A8F1 /* songkick2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254F4197B224A00B1A8F1 /* songkick2.jpg */; };
+		97C254F7197B229500B1A8F1 /* songkick3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254F6197B229500B1A8F1 /* songkick3.jpg */; };
+		97C254F9197B25FD00B1A8F1 /* songkick4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254F8197B25FD00B1A8F1 /* songkick4.jpg */; };
+		97C254FB197B265200B1A8F1 /* songkick5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254FA197B265200B1A8F1 /* songkick5.jpg */; };
+		97C254FD197BACD600B1A8F1 /* songkick6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254FC197BACD600B1A8F1 /* songkick6.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +98,17 @@
 		97A30F4F194DB675006FB314 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		97A30F51194DD738006FB314 /* Gig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gig.swift; sourceTree = "<group>"; };
 		97A30F53194DDEF9006FB314 /* NSDateExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExt.swift; sourceTree = "<group>"; };
+		97C254E4197B06FC00B1A8F1 /* SongkickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongkickViewController.swift; sourceTree = "<group>"; };
+		97C254EA197B0CBE00B1A8F1 /* tickets.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tickets.jpg; sourceTree = "<group>"; };
+		97C254EC197B0CF600B1A8F1 /* tickets_small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tickets_small.jpg; sourceTree = "<group>"; };
+		97C254EE197B0F5300B1A8F1 /* tickets_png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tickets_png.png; sourceTree = "<group>"; };
+		97C254F0197B1F0300B1A8F1 /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loading.jpg; sourceTree = "<group>"; };
+		97C254F2197B21AF00B1A8F1 /* songkick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = songkick.jpg; sourceTree = "<group>"; };
+		97C254F4197B224A00B1A8F1 /* songkick2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = songkick2.jpg; sourceTree = "<group>"; };
+		97C254F6197B229500B1A8F1 /* songkick3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = songkick3.jpg; sourceTree = "<group>"; };
+		97C254F8197B25FD00B1A8F1 /* songkick4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = songkick4.jpg; sourceTree = "<group>"; };
+		97C254FA197B265200B1A8F1 /* songkick5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = songkick5.jpg; sourceTree = "<group>"; };
+		97C254FC197BACD600B1A8F1 /* songkick6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = songkick6.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				9765D1531970540400ECD5A2 /* Main.storyboard */,
+				9765D1981972A33F00ECD5A2 /* PlayerView.xib */,
 				97A30F51194DD738006FB314 /* Gig.swift */,
 				9728CB7A1972E27600B76241 /* Track.swift */,
 				9765D17F1970A34A00ECD5A2 /* GigCalendarController.swift */,
@@ -171,8 +194,8 @@
 				977A7D81194D7C7600EBE53A /* Supporting Files */,
 				97A30F3E194DB547006FB314 /* radiohere-Bridging-Header.h */,
 				97A30F53194DDEF9006FB314 /* NSDateExt.swift */,
-				9765D1981972A33F00ECD5A2 /* PlayerView.xib */,
 				9765D19A1972C1AE00ECD5A2 /* PlaylistController.swift */,
+				97C254E4197B06FC00B1A8F1 /* SongkickViewController.swift */,
 			);
 			path = radiohere;
 			sourceTree = "<group>";
@@ -181,7 +204,17 @@
 			isa = PBXGroup;
 			children = (
 				9728CB7E1972EC0700B76241 /* media-fast-forward.png */,
+				97C254F2197B21AF00B1A8F1 /* songkick.jpg */,
+				97C254EE197B0F5300B1A8F1 /* tickets_png.png */,
+				97C254F8197B25FD00B1A8F1 /* songkick4.jpg */,
+				97C254FA197B265200B1A8F1 /* songkick5.jpg */,
+				97C254F0197B1F0300B1A8F1 /* loading.jpg */,
+				97C254F6197B229500B1A8F1 /* songkick3.jpg */,
+				97C254EC197B0CF600B1A8F1 /* tickets_small.jpg */,
+				97C254EA197B0CBE00B1A8F1 /* tickets.jpg */,
+				97C254F4197B224A00B1A8F1 /* songkick2.jpg */,
 				9728CB7C1972EA9300B76241 /* next_blue.png */,
+				97C254FC197BACD600B1A8F1 /* songkick6.jpg */,
 				9765D19219727E2900ECD5A2 /* Hungama-Free-Music-Videos-Radio-1-120x120.jpg */,
 				9765D19319727E2900ECD5A2 /* play80.jpg */,
 				977A7D82194D7C7600EBE53A /* Info.plist */,
@@ -287,11 +320,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C254F7197B229500B1A8F1 /* songkick3.jpg in Resources */,
+				97C254F3197B21AF00B1A8F1 /* songkick.jpg in Resources */,
 				9765D1541970540400ECD5A2 /* Main.storyboard in Resources */,
+				97C254ED197B0CF600B1A8F1 /* tickets_small.jpg in Resources */,
+				97C254EB197B0CBE00B1A8F1 /* tickets.jpg in Resources */,
 				9765D19519727E2900ECD5A2 /* play80.jpg in Resources */,
 				9728CB7D1972EA9300B76241 /* next_blue.png in Resources */,
 				977A7D8B194D7C7600EBE53A /* Images.xcassets in Resources */,
 				9765D19419727E2900ECD5A2 /* Hungama-Free-Music-Videos-Radio-1-120x120.jpg in Resources */,
+				97C254F9197B25FD00B1A8F1 /* songkick4.jpg in Resources */,
+				97C254FB197B265200B1A8F1 /* songkick5.jpg in Resources */,
+				97C254EF197B0F5300B1A8F1 /* tickets_png.png in Resources */,
+				97C254FD197BACD600B1A8F1 /* songkick6.jpg in Resources */,
+				97C254F1197B1F0300B1A8F1 /* loading.jpg in Resources */,
+				97C254F5197B224A00B1A8F1 /* songkick2.jpg in Resources */,
 				9765D1991972A33F00ECD5A2 /* PlayerView.xib in Resources */,
 				9728CB7F1972EC0700B76241 /* media-fast-forward.png in Resources */,
 			);
@@ -325,6 +368,7 @@
 				97A30F54194DDEF9006FB314 /* NSDateExt.swift in Sources */,
 				9765D18C197194EC00ECD5A2 /* TSQCalendarCell.m in Sources */,
 				9765D19B1972C1AE00ECD5A2 /* PlaylistController.swift in Sources */,
+				97C254E5197B06FC00B1A8F1 /* SongkickViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

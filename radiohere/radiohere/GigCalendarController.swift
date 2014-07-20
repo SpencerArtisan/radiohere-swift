@@ -10,7 +10,7 @@ import UIKit
 
 class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarViewDelegate {
     let SERVER = "ws://radiohere.herokuapp.com/game"
-//        let SERVER = "ws://localhost:8025/game"
+//    let SERVER = "ws://localhost:8025/game"
     
     var socket = SRWebSocket()
     var tableData = Dictionary<NSDate, NSMutableArray>()
@@ -56,10 +56,10 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     
     func webSocketDidOpen(socket: SRWebSocket!) {
         println("Socket Open!")
-        socket.send("51.5403,-0.0884,5.0") // YEATE
+//        socket.send("51.5403,-0.0884,5.0") // YEATE
 //        socket.send("51.5265,-0.0825,2.0") // OLD
-//        socket.send("51.484225,-0.022034,20") // LEON
-        var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("updateTable"), userInfo: nil, repeats: true)
+        socket.send("51.484225,-0.022034,20") // LEON
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateTable"), userInfo: nil, repeats: true)
     }
     
     func webSocket(webSocket: SRWebSocket!, didReceiveMessage message: AnyObject) {
