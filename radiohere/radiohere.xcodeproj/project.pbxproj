@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		972881C61A488E2A00775AC4 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 972881C51A488E2A00775AC4 /* location.png */; };
+		972881C81A488E4B00775AC4 /* calendar-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 972881C71A488E4B00775AC4 /* calendar-128.png */; };
+		972881CA1A48BF7100775AC4 /* VenuesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972881C91A48BF7100775AC4 /* VenuesController.swift */; };
+		972881CC1A48CA7B00775AC4 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972881CB1A48CA7B00775AC4 /* Venue.swift */; };
+		972881CE1A48DFF100775AC4 /* MusicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972881CD1A48DFF100775AC4 /* MusicScene.swift */; };
 		9728CB7B1972E27600B76241 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9728CB7A1972E27600B76241 /* Track.swift */; };
 		9728CB7D1972EA9300B76241 /* next_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728CB7C1972EA9300B76241 /* next_blue.png */; };
 		9728CB7F1972EC0700B76241 /* media-fast-forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728CB7E1972EC0700B76241 /* media-fast-forward.png */; };
@@ -26,6 +31,7 @@
 		977A7D97194D7C7600EBE53A /* radiohereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977A7D96194D7C7600EBE53A /* radiohereTests.swift */; };
 		979D1B3E1A484ADF00241C33 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979D1B3D1A484ADF00241C33 /* AVFoundation.framework */; };
 		979D1B401A485DB500241C33 /* play8.png in Resources */ = {isa = PBXBuildFile; fileRef = 979D1B3F1A485DB500241C33 /* play8.png */; };
+		979D1B421A48833800241C33 /* Mode.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979D1B411A48833800241C33 /* Mode.xib */; };
 		97A30F41194DB547006FB314 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F40194DB547006FB314 /* SRWebSocket.m */; };
 		97A30F47194DB566006FB314 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F42194DB566006FB314 /* base64.c */; };
 		97A30F48194DB566006FB314 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F45194DB566006FB314 /* NSData+SRB64Additions.m */; };
@@ -59,6 +65,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		972881C51A488E2A00775AC4 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		972881C71A488E4B00775AC4 /* calendar-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-128.png"; sourceTree = "<group>"; };
+		972881C91A48BF7100775AC4 /* VenuesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesController.swift; sourceTree = "<group>"; };
+		972881CB1A48CA7B00775AC4 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		972881CD1A48DFF100775AC4 /* MusicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicScene.swift; sourceTree = "<group>"; };
 		9728CB7A1972E27600B76241 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		9728CB7C1972EA9300B76241 /* next_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_blue.png; sourceTree = "<group>"; };
 		9728CB7E1972EC0700B76241 /* media-fast-forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "media-fast-forward.png"; sourceTree = "<group>"; };
@@ -88,6 +99,7 @@
 		977A7D96194D7C7600EBE53A /* radiohereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radiohereTests.swift; sourceTree = "<group>"; };
 		979D1B3D1A484ADF00241C33 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		979D1B3F1A485DB500241C33 /* play8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play8.png; sourceTree = "<group>"; };
+		979D1B411A48833800241C33 /* Mode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mode.xib; sourceTree = "<group>"; };
 		97A30F3E194DB547006FB314 /* radiohere-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "radiohere-Bridging-Header.h"; sourceTree = "<group>"; };
 		97A30F3F194DB547006FB314 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		97A30F40194DB547006FB314 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
@@ -201,6 +213,10 @@
 				97A30F53194DDEF9006FB314 /* NSDateExt.swift */,
 				9765D19A1972C1AE00ECD5A2 /* PlaylistController.swift */,
 				97C254E4197B06FC00B1A8F1 /* SongkickViewController.swift */,
+				979D1B411A48833800241C33 /* Mode.xib */,
+				972881C91A48BF7100775AC4 /* VenuesController.swift */,
+				972881CB1A48CA7B00775AC4 /* Venue.swift */,
+				972881CD1A48DFF100775AC4 /* MusicScene.swift */,
 			);
 			path = radiohere;
 			sourceTree = "<group>";
@@ -209,7 +225,9 @@
 			isa = PBXGroup;
 			children = (
 				977A7D8A194D7C7600EBE53A /* Images.xcassets */,
+				972881C71A488E4B00775AC4 /* calendar-128.png */,
 				979D1B3F1A485DB500241C33 /* play8.png */,
+				972881C51A488E2A00775AC4 /* location.png */,
 				9728CB7E1972EC0700B76241 /* media-fast-forward.png */,
 				97C254F2197B21AF00B1A8F1 /* songkick.jpg */,
 				97C254EE197B0F5300B1A8F1 /* tickets_png.png */,
@@ -330,6 +348,7 @@
 				97C254F7197B229500B1A8F1 /* songkick3.jpg in Resources */,
 				97C254F3197B21AF00B1A8F1 /* songkick.jpg in Resources */,
 				9765D1541970540400ECD5A2 /* Main.storyboard in Resources */,
+				972881C61A488E2A00775AC4 /* location.png in Resources */,
 				97C254ED197B0CF600B1A8F1 /* tickets_small.jpg in Resources */,
 				97C254EB197B0CBE00B1A8F1 /* tickets.jpg in Resources */,
 				9765D19519727E2900ECD5A2 /* play80.jpg in Resources */,
@@ -338,7 +357,9 @@
 				9765D19419727E2900ECD5A2 /* Hungama-Free-Music-Videos-Radio-1-120x120.jpg in Resources */,
 				97C254F9197B25FD00B1A8F1 /* songkick4.jpg in Resources */,
 				97C254FB197B265200B1A8F1 /* songkick5.jpg in Resources */,
+				972881C81A488E4B00775AC4 /* calendar-128.png in Resources */,
 				97C254EF197B0F5300B1A8F1 /* tickets_png.png in Resources */,
+				979D1B421A48833800241C33 /* Mode.xib in Resources */,
 				97C254FD197BACD600B1A8F1 /* songkick6.jpg in Resources */,
 				97C254F1197B1F0300B1A8F1 /* loading.jpg in Resources */,
 				979D1B401A485DB500241C33 /* play8.png in Resources */,
@@ -363,6 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9765D152197053FD00ECD5A2 /* DetailViewController.swift in Sources */,
+				972881CC1A48CA7B00775AC4 /* Venue.swift in Sources */,
+				972881CE1A48DFF100775AC4 /* MusicScene.swift in Sources */,
 				9765D1801970A34A00ECD5A2 /* GigCalendarController.swift in Sources */,
 				9765D18D197194EC00ECD5A2 /* TSQCalendarMonthHeaderCell.m in Sources */,
 				97A30F52194DD739006FB314 /* Gig.swift in Sources */,
@@ -373,6 +396,7 @@
 				97A30F47194DB566006FB314 /* base64.c in Sources */,
 				977A7D84194D7C7600EBE53A /* AppDelegate.swift in Sources */,
 				9728CB7B1972E27600B76241 /* Track.swift in Sources */,
+				972881CA1A48BF7100775AC4 /* VenuesController.swift in Sources */,
 				97A30F54194DDEF9006FB314 /* NSDateExt.swift in Sources */,
 				9765D18C197194EC00ECD5A2 /* TSQCalendarCell.m in Sources */,
 				9765D19B1972C1AE00ECD5A2 /* PlaylistController.swift in Sources */,

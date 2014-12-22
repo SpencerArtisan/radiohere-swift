@@ -14,7 +14,7 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
 //    let SERVER = "ws://192.168.1.67:8025/game"
     
     var socket = SRWebSocket()
-    var tableData = Dictionary<NSDate, NSMutableArray>()
+    var musicScene = MusicScene()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,15 +34,24 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         calendar.selectedDate = nil
         calendar.delegate = self
         self.view = calendar
+        
+        var modeBar = NSBundle.mainBundle().loadNibNamed("Mode", owner: self, options: nil)[0] as UIView
+        modeBar.frame = CGRectMake(0, 0, 320, 40)
+        self.navigationItem.titleView = modeBar
+    }
+    
+    @IBAction func onClickVenue(sender: AnyObject) {
+        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("VenuesController") as VenuesController
+        secondViewController.musicScene = self.musicScene
+        self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     
     func calendarView(calendarView: TSQCalendarView, shouldSelectDate date: NSDate) -> Bool {
-        return tableData[date] != nil
+        return musicScene.hasGigOn(date)
     }
 
     func calendarView(calendarView: TSQCalendarView, didSelectDate date: NSDate) {
-        println(date)
-        let gigs = tableData[date]
+        let gigs = self.musicScene.tableData[date]
         let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
         secondViewController.gigs = gigs!
         self.navigationController?.pushViewController(secondViewController, animated: true)
@@ -59,32 +68,14 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         println("Socket Open!")
 //        socket.send("51.5262,-0.05938,5.0") // BETHNAL GREEN
         socket.send("51.5403,-0.0884,5.0") // YEATE
-//        socket.send("51.5265,-0.0825,2.0") // OLD
+//        socket.send("51.5265,-0.0825,2.0") // OLD STREET
 //        socket.send("51.484225,-0.022034,20") // LEON
         var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateTable"), userInfo: nil, repeats: true)
     }
     
     func webSocket(webSocket: SRWebSocket!, didReceiveMessage message: AnyObject) {
         objc_sync_enter(self)
-        
-        var gig = Gig(jsonText: message.description)
-        println("Received gig from server: \(gig)")
-        
-        if gig.hasTrack() {
-            var gigs : NSMutableArray
-            if (tableData[gig.nsDate()] != nil) {
-                gigs = tableData[gig.nsDate()]!
-                gigs.addObject(gig)
-                tableData[gig.nsDate()] = gigs
-            } else {
-                gigs = NSMutableArray()
-                gigs.addObject(gig)
-                tableData[gig.nsDate()] = gigs
-            }
-        } else {
-            println("IGNORING TRACKLESS gig \(gig)")
-        }
-        
+        self.musicScene.add(Gig(jsonText: message.description))
         objc_sync_exit(self)
     }
     
