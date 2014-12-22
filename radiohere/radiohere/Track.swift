@@ -16,7 +16,9 @@ class Track {
     }
     
     func streamUrl() -> NSURL {
-        return NSURL.URLWithString(json["streamUrl"] as NSString)
+        var urlString = json["streamUrl"] as NSString
+        var url = NSURL(string: urlString)!
+        return url
     }
     
     func name() -> NSString {

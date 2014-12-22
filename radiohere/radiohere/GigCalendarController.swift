@@ -11,6 +11,7 @@ import UIKit
 class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarViewDelegate {
     let SERVER = "ws://radiohere.herokuapp.com/game"
 //    let SERVER = "ws://localhost:8025/game"
+//    let SERVER = "ws://192.168.1.67:8025/game"
     
     var socket = SRWebSocket()
     var tableData = Dictionary<NSDate, NSMutableArray>()
@@ -42,23 +43,24 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     func calendarView(calendarView: TSQCalendarView, didSelectDate date: NSDate) {
         println(date)
         let gigs = tableData[date]
-        let secondViewController = self.storyboard.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
+        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
         secondViewController.gigs = gigs!
-        self.navigationController.pushViewController(secondViewController, animated: true)
+        self.navigationController?.pushViewController(secondViewController, animated: true)
         
     }
 
     func openWebSocket() {
-        socket = SRWebSocket(URL: NSURL.URLWithString(SERVER))
+        socket = SRWebSocket(URL: NSURL(string: SERVER))
         socket.delegate = self
         socket.open()
     }
     
     func webSocketDidOpen(socket: SRWebSocket!) {
         println("Socket Open!")
-//        socket.send("51.5403,-0.0884,5.0") // YEATE
+//        socket.send("51.5262,-0.05938,5.0") // BETHNAL GREEN
+        socket.send("51.5403,-0.0884,5.0") // YEATE
 //        socket.send("51.5265,-0.0825,2.0") // OLD
-        socket.send("51.484225,-0.022034,20") // LEON
+//        socket.send("51.484225,-0.022034,20") // LEON
         var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateTable"), userInfo: nil, repeats: true)
     }
     
@@ -70,7 +72,7 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         
         if gig.hasTrack() {
             var gigs : NSMutableArray
-            if tableData[gig.nsDate()] {
+            if (tableData[gig.nsDate()] != nil) {
                 gigs = tableData[gig.nsDate()]!
                 gigs.addObject(gig)
                 tableData[gig.nsDate()] = gigs

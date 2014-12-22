@@ -13,7 +13,7 @@ class Gig {
     
     init(jsonText: NSString) {
         var data = jsonText.dataUsingEncoding(NSUTF8StringEncoding);
-        json = NSJSONSerialization.JSONObjectWithData(data, options:    NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+        json = NSJSONSerialization.JSONObjectWithData(data!, options:    NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
     }
     
     func artist() -> String {
@@ -43,7 +43,7 @@ class Gig {
     }
     
     func hasTrack() -> Bool {
-        return json["tracks"].count > 0
+        return json["tracks"]?.count > 0
     }
     
     func tracks() -> Array<Track> {

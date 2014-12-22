@@ -11,14 +11,14 @@ import UIKit
 class SongkickViewController: UIViewController {
     var url : String?
     
-    @IBOutlet var webView: UIWebView
+    @IBOutlet var webView: UIWebView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView.backgroundColor = UIColor(patternImage: UIImage(named:"songkick6.jpg"))
+        webView?.backgroundColor = UIColor(patternImage: UIImage(named:"songkick6.jpg")!)
         self.automaticallyAdjustsScrollViewInsets = false
-        var request = NSURLRequest(URL: NSURL.URLWithString(url))
-        webView.loadRequest(request)
+        var request = NSURLRequest(URL: NSURL(string:url!)!)
+        webView?.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {

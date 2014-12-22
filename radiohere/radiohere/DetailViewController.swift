@@ -15,10 +15,10 @@ class DetailViewController: UITableViewController {
     var trackIndex = 0
     var timer : NSTimer = NSTimer()
     
-    @IBOutlet var myPlayer: UIView
-    @IBOutlet var songTitle: UILabel
-    @IBOutlet var nextTrack: UIButton
-    @IBOutlet var tickets: UIButton
+    @IBOutlet var myPlayer: UIView?
+    @IBOutlet var songTitle: UILabel?
+    @IBOutlet var nextTrack: UIButton?
+    @IBOutlet var tickets: UIButton?
     
     var gigs: NSMutableArray = NSMutableArray() {
         didSet {
@@ -28,9 +28,9 @@ class DetailViewController: UITableViewController {
     }
     
     @IBAction func touchTickets(sender: AnyObject) {
-        let secondViewController = self.storyboard.instantiateViewControllerWithIdentifier("SongkickViewController") as SongkickViewController
+        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SongkickViewController") as SongkickViewController
         secondViewController.url = selected?.songkickUrl()
-        self.navigationController.pushViewController(secondViewController, animated: true)
+        self.navigationController?.pushViewController(secondViewController, animated: true)
     }
 
     @IBAction func touchNext(sender: AnyObject) {
@@ -54,11 +54,12 @@ class DetailViewController: UITableViewController {
     }
     
     func playTrack() {
-        audioPlayer = AVPlayer(URL: selected!.tracks()[trackIndex].streamUrl())
+        var url = selected!.tracks()[trackIndex].streamUrl()
+        audioPlayer = AVPlayer(URL: url)
         audioPlayer.play()
-        songTitle.text = selected!.tracks()[trackIndex].name()
-        nextTrack.hidden = false
-        tickets.hidden = false
+        songTitle?.text = selected!.tracks()[trackIndex].name()
+        nextTrack?.hidden = false
+        tickets?.hidden = false
     }
 
     override func viewDidLoad() {
@@ -102,12 +103,12 @@ class DetailViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gigs.count
     }
-    
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCell")
         let gig = gigs[indexPath.row] as Gig
-        cell.textLabel.text = gig.artist()
-        cell.detailTextLabel.text = "\(gig.venue()) (\(gig.distance())km)"
+        cell.textLabel?.text = gig.artist()
+        cell.detailTextLabel?.text = "\(gig.venue()) (\(gig.distance())km)"
         return cell
     }
 }

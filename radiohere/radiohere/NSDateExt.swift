@@ -17,7 +17,7 @@ extension NSDate {
             dateStringFormatter.dateFormat = "yyyy-MM-dd"
             dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
             let d = dateStringFormatter.dateFromString(dateString)
-            self.init(timeInterval:0, sinceDate:d)
+            self.init(timeInterval:0, sinceDate:d!)
     }
     
     func format(s:String) -> String {
@@ -34,7 +34,7 @@ extension NSDate {
     
     func add(components: NSDateComponents) -> NSDate {
         let cal = NSCalendar.currentCalendar()
-        return cal.dateByAddingComponents(components, toDate: self, options: nil)
+        return cal.dateByAddingComponents(components, toDate: self, options: nil)!
     }
     
     func addMonth(months: NSInteger) -> NSDate {
@@ -46,9 +46,6 @@ extension NSDate {
     func subtract(components: NSDateComponents) -> NSDate {
         
         func negateIfNeeded(i: NSInteger) -> NSInteger {
-            if i == NSUndefinedDateComponent {
-                return i
-            }
             return -i
         }
         
@@ -64,19 +61,19 @@ extension NSDate {
     }
 }
 
-@infix func + (left: NSDate, right:NSTimeInterval) -> NSDate {
+func + (left: NSDate, right:NSTimeInterval) -> NSDate {
     return left.dateByAddingTimeInterval(right)
 }
 
-@infix func + (left: NSDate, right:NSDateComponents) -> NSDate {
+func + (left: NSDate, right:NSDateComponents) -> NSDate {
     return left.add(right);
 }
 
-@infix func - (left: NSDate, right:NSTimeInterval) -> NSDate {
+func - (left: NSDate, right:NSTimeInterval) -> NSDate {
     return left.dateByAddingTimeInterval(-right)
 }
 
-@infix func - (left: NSDate, right:NSDateComponents) -> NSDate {
+func - (left: NSDate, right:NSDateComponents) -> NSDate {
     return left.subtract(right);
 }
 

@@ -38,5 +38,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "radiohere.DetailViewController.playTrack (radiohere.DetailViewController)() -&gt; ():DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selected!.tracks()[trackIndex].streamUrl()">
+            </PersistentString>
+            <PersistentString
+               value = "audioPlayer.status">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>
