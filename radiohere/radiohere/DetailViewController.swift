@@ -63,6 +63,10 @@ class DetailViewController: UITableViewController {
         tickets?.hidden = false
     }
 
+    override func viewDidAppear(animated: Bool) {
+        navigationController?.toolbarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -86,8 +90,7 @@ class DetailViewController: UITableViewController {
     override func viewDidDisappear(animated: Bool) {
         println("KILLING DETAIL VIEW \(self)")
         audioPlayer.pause()
-//        gigs = NSMutableArray()
-//        timer.invalidate()
+        navigationController?.toolbarHidden = true
     }
 
     override func didReceiveMemoryWarning() {

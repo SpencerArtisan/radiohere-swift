@@ -10,15 +10,9 @@ import UIKit
 
 class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarViewDelegate {
     let SERVER = "ws://radiohere.herokuapp.com/game"
-//    let SERVER = "ws://localhost:8025/game"
-//    let SERVER = "ws://192.168.1.67:8025/game"
     
     var socket = SRWebSocket()
     var musicScene = MusicScene()
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
     
     override func viewDidLoad() {
         openWebSocket()
@@ -39,6 +33,10 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         self.navigationItem.titleView = modeBar
     }
     
+    override func viewDidAppear(animated: Bool) {
+        navigationController?.toolbarHidden = true
+    }
+
     @IBAction func onClickVenue(sender: AnyObject) {
         let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("VenuesController") as VenuesController
         secondViewController.musicScene = self.musicScene

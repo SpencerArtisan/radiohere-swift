@@ -18,6 +18,10 @@ class VenuesController: UITableViewController {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        navigationController?.toolbarHidden = true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
