@@ -46,15 +46,19 @@ class MusicScene {
         return self.gigsByDate[date] != nil
     }
     
-    func getGigsOn(date: NSDate) -> NSMutableArray {
-        return self.gigsByDate[date]!
+    func getGigsOn(date: NSDate) -> [Gig] {
+        return self.gigsByDate[date]! as AnyObject as [Gig]
     }
     
-    func getGigsAt(venue: Venue) -> NSMutableArray {
-        return self.gigsByVenue[venue]!
+    func getGigsAt(venue: Venue) -> [Gig] {
+        var gigs = self.gigsByVenue[venue]! as AnyObject as [Gig]
+        gigs.sort { (a:Gig, b:Gig) -> Bool in
+            return a.nsDate().compare(b.nsDate()) == NSComparisonResult.OrderedAscending
+        }
+        return gigs
     }
     
-    func getGigsAt(venueName: String) -> NSMutableArray {
+    func getGigsAt(venueName: String) -> [Gig] {
         return getGigsAt(Venue(venueName: venueName))
     }
     

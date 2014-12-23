@@ -21,7 +21,7 @@ class DetailViewController: UITableViewController {
     @IBOutlet var nextTrack: UIButton?
     @IBOutlet var tickets: UIButton?
     
-    var gigs: NSMutableArray = NSMutableArray()
+    var gigs: [Gig] = []
     
     @IBAction func touchTickets(sender: AnyObject) {
         let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SongkickViewController") as SongkickViewController
