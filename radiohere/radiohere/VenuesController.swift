@@ -14,10 +14,22 @@ class VenuesController: UITableViewController {
     
     var musicScene: MusicScene = MusicScene()
     
+    @IBAction func onClickDates(sender: AnyObject) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         timer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+    
+        var modeBar = NSBundle.mainBundle().loadNibNamed("VenueMode", owner: self, options: nil)[0] as UIView
+        modeBar.frame = CGRectMake(0, 0, 320, 40)
+//        self.navigationController?.setNavigationBarHidden(true, animated: false)
+//        self.view.addSubview(modeBar)
+        self.navigationItem.titleView = modeBar
+        self.navigationItem.hidesBackButton = true
     }
     
     func update() {
@@ -34,7 +46,7 @@ class VenuesController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "MyCell")
         let venue = self.musicScene.getVenues()[indexPath.row] as Venue
         cell.textLabel?.text = "\(venue.name) (\(venue.distance)km)"
         return cell

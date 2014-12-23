@@ -21,7 +21,6 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     }
     
     override func viewDidLoad() {
-        navigationItem.title = "Radiohere"
         openWebSocket()
         initCalendar()
         super.viewDidLoad()
@@ -35,7 +34,7 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         calendar.delegate = self
         self.view = calendar
         
-        var modeBar = NSBundle.mainBundle().loadNibNamed("Mode", owner: self, options: nil)[0] as UIView
+        var modeBar = NSBundle.mainBundle().loadNibNamed("DateMode", owner: self, options: nil)[0] as UIView
         modeBar.frame = CGRectMake(0, 0, 320, 40)
         self.navigationItem.titleView = modeBar
     }
@@ -43,6 +42,7 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     @IBAction func onClickVenue(sender: AnyObject) {
         let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("VenuesController") as VenuesController
         secondViewController.musicScene = self.musicScene
+    
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     

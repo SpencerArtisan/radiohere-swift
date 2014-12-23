@@ -31,7 +31,7 @@
 		977A7D97194D7C7600EBE53A /* radiohereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977A7D96194D7C7600EBE53A /* radiohereTests.swift */; };
 		979D1B3E1A484ADF00241C33 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979D1B3D1A484ADF00241C33 /* AVFoundation.framework */; };
 		979D1B401A485DB500241C33 /* play8.png in Resources */ = {isa = PBXBuildFile; fileRef = 979D1B3F1A485DB500241C33 /* play8.png */; };
-		979D1B421A48833800241C33 /* Mode.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979D1B411A48833800241C33 /* Mode.xib */; };
+		979D1B421A48833800241C33 /* DateMode.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979D1B411A48833800241C33 /* DateMode.xib */; };
 		97A30F41194DB547006FB314 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F40194DB547006FB314 /* SRWebSocket.m */; };
 		97A30F47194DB566006FB314 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F42194DB566006FB314 /* base64.c */; };
 		97A30F48194DB566006FB314 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A30F45194DB566006FB314 /* NSData+SRB64Additions.m */; };
@@ -52,6 +52,7 @@
 		97C254F9197B25FD00B1A8F1 /* songkick4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254F8197B25FD00B1A8F1 /* songkick4.jpg */; };
 		97C254FB197B265200B1A8F1 /* songkick5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254FA197B265200B1A8F1 /* songkick5.jpg */; };
 		97C254FD197BACD600B1A8F1 /* songkick6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97C254FC197BACD600B1A8F1 /* songkick6.jpg */; };
+		97DCCA3B1A49CFBA001B691B /* VenueMode.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97DCCA3A1A49CFBA001B691B /* VenueMode.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +100,7 @@
 		977A7D96194D7C7600EBE53A /* radiohereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radiohereTests.swift; sourceTree = "<group>"; };
 		979D1B3D1A484ADF00241C33 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		979D1B3F1A485DB500241C33 /* play8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play8.png; sourceTree = "<group>"; };
-		979D1B411A48833800241C33 /* Mode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mode.xib; sourceTree = "<group>"; };
+		979D1B411A48833800241C33 /* DateMode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateMode.xib; sourceTree = "<group>"; };
 		97A30F3E194DB547006FB314 /* radiohere-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "radiohere-Bridging-Header.h"; sourceTree = "<group>"; };
 		97A30F3F194DB547006FB314 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		97A30F40194DB547006FB314 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		97C254F8197B25FD00B1A8F1 /* songkick4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = songkick4.jpg; sourceTree = "<group>"; };
 		97C254FA197B265200B1A8F1 /* songkick5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = songkick5.jpg; sourceTree = "<group>"; };
 		97C254FC197BACD600B1A8F1 /* songkick6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = songkick6.jpg; sourceTree = "<group>"; };
+		97DCCA3A1A49CFBA001B691B /* VenueMode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueMode.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,10 +215,11 @@
 				97A30F53194DDEF9006FB314 /* NSDateExt.swift */,
 				9765D19A1972C1AE00ECD5A2 /* PlaylistController.swift */,
 				97C254E4197B06FC00B1A8F1 /* SongkickViewController.swift */,
-				979D1B411A48833800241C33 /* Mode.xib */,
+				979D1B411A48833800241C33 /* DateMode.xib */,
 				972881C91A48BF7100775AC4 /* VenuesController.swift */,
 				972881CB1A48CA7B00775AC4 /* Venue.swift */,
 				972881CD1A48DFF100775AC4 /* MusicScene.swift */,
+				97DCCA3A1A49CFBA001B691B /* VenueMode.xib */,
 			);
 			path = radiohere;
 			sourceTree = "<group>";
@@ -355,11 +358,12 @@
 				9728CB7D1972EA9300B76241 /* next_blue.png in Resources */,
 				977A7D8B194D7C7600EBE53A /* Images.xcassets in Resources */,
 				9765D19419727E2900ECD5A2 /* Hungama-Free-Music-Videos-Radio-1-120x120.jpg in Resources */,
+				97DCCA3B1A49CFBA001B691B /* VenueMode.xib in Resources */,
 				97C254F9197B25FD00B1A8F1 /* songkick4.jpg in Resources */,
 				97C254FB197B265200B1A8F1 /* songkick5.jpg in Resources */,
 				972881C81A488E4B00775AC4 /* calendar-128.png in Resources */,
 				97C254EF197B0F5300B1A8F1 /* tickets_png.png in Resources */,
-				979D1B421A48833800241C33 /* Mode.xib in Resources */,
+				979D1B421A48833800241C33 /* DateMode.xib in Resources */,
 				97C254FD197BACD600B1A8F1 /* songkick6.jpg in Resources */,
 				97C254F1197B1F0300B1A8F1 /* loading.jpg in Resources */,
 				979D1B401A485DB500241C33 /* play8.png in Resources */,
