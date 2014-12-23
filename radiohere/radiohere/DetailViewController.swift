@@ -20,12 +20,7 @@ class DetailViewController: UITableViewController {
     @IBOutlet var nextTrack: UIButton?
     @IBOutlet var tickets: UIButton?
     
-    var gigs: NSMutableArray = NSMutableArray() {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
-    }
+    var gigs: NSMutableArray = NSMutableArray()
     
     @IBAction func touchTickets(sender: AnyObject) {
         let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SongkickViewController") as SongkickViewController
@@ -41,9 +36,12 @@ class DetailViewController: UITableViewController {
         playTrack()
     }
     
+    func showByVenue(venue: String) {
+        self.navigationItem.title = venue
+    }
     
-    func configureView() {
-        self.navigationItem.title = gigs.count > 0 ? (gigs[0] as Gig).date() : ""
+    func showByDate(date: String) {
+        self.navigationItem.title = date
     }
 
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath
@@ -65,7 +63,6 @@ class DetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
         timer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         
         var myPlayer = NSBundle.mainBundle().loadNibNamed("PlayerView", owner: self, options: nil)[0] as UIView

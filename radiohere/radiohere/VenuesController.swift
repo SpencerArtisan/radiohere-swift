@@ -22,10 +22,6 @@ class VenuesController: UITableViewController {
     func configureView() {
     }
     
-    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath
-        indexPath: NSIndexPath!) {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -36,7 +32,6 @@ class VenuesController: UITableViewController {
     func update() {
         let selected = self.tableView.indexPathForSelectedRow()
         self.tableView.reloadData()
-        self.tableView.selectRowAtIndexPath(selected, animated: false, scrollPosition: UITableViewScrollPosition.None)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -54,10 +49,12 @@ class VenuesController: UITableViewController {
         return cell
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let venue = self.musicScene.getVenues()[indexPath.row] as Venue    
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        var cell = tableView.cellForRowAtIndexPath(indexPath)!
+        var venue = cell.textLabel?.text?.componentsSeparatedByString(" (")[0]
         let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
-        secondViewController.gigs = self.musicScene.getGigsAt(venue)
+        secondViewController.gigs = self.musicScene.getGigsAt(venue!)
+        secondViewController.showByVenue(venue!)
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
 }

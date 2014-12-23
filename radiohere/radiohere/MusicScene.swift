@@ -12,13 +12,13 @@ class MusicScene {
     var allGigs: [Gig] = []
     var gigsByDate = Dictionary<NSDate, NSMutableArray>()
     var gigsByVenue = Dictionary<Venue, NSMutableArray>()
-
     
     func add(gig: Gig) {
         if gig.hasTrack() {
             self.allGigs.append(gig)
 
             var gigs : NSMutableArray
+            
             if (gigsByDate[gig.nsDate()] != nil) {
                 gigs = gigsByDate[gig.nsDate()]!
                 gigs.addObject(gig)
@@ -31,17 +31,14 @@ class MusicScene {
 
             var venue = Venue(gig: gig as Gig)
             if (gigsByVenue[venue] != nil) {
-                println("Adding matched venue" + venue.name)
                 gigs = gigsByVenue[venue]!
                 gigs.addObject(gig)
                 gigsByVenue[venue] = gigs
             } else {
-                println("Adding new venue" + venue.name)
                 gigs = NSMutableArray()
                 gigs.addObject(gig)
                 gigsByVenue[venue] = gigs
             }
-        
         }
     }
     
@@ -55,6 +52,10 @@ class MusicScene {
     
     func getGigsAt(venue: Venue) -> NSMutableArray {
         return self.gigsByVenue[venue]!
+    }
+    
+    func getGigsAt(venueName: String) -> NSMutableArray {
+        return getGigsAt(Venue(venueName: venueName))
     }
     
     func getVenues() -> [Venue] {

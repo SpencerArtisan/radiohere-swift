@@ -17,6 +17,10 @@ class Venue : NSObject {
         self.distance = gig.distance()
     }
     
+    init(venueName: String) {
+        self.name = venueName
+    }
+    
     override func isEqual(anObject: AnyObject?) -> Bool {
         return anObject is Venue && (anObject as Venue).name == name
     }
