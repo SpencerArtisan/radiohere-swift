@@ -12,6 +12,7 @@
 		972881CA1A48BF7100775AC4 /* VenuesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972881C91A48BF7100775AC4 /* VenuesController.swift */; };
 		972881CC1A48CA7B00775AC4 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972881CB1A48CA7B00775AC4 /* Venue.swift */; };
 		972881CE1A48DFF100775AC4 /* MusicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972881CD1A48DFF100775AC4 /* MusicScene.swift */; };
+		972881D21A48E5C600775AC4 /* VenueGigListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972881D11A48E5C600775AC4 /* VenueGigListController.swift */; };
 		9728CB7B1972E27600B76241 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9728CB7A1972E27600B76241 /* Track.swift */; };
 		9728CB7D1972EA9300B76241 /* next_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728CB7C1972EA9300B76241 /* next_blue.png */; };
 		9728CB7F1972EC0700B76241 /* media-fast-forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728CB7E1972EC0700B76241 /* media-fast-forward.png */; };
@@ -70,6 +71,7 @@
 		972881C91A48BF7100775AC4 /* VenuesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesController.swift; sourceTree = "<group>"; };
 		972881CB1A48CA7B00775AC4 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		972881CD1A48DFF100775AC4 /* MusicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicScene.swift; sourceTree = "<group>"; };
+		972881D11A48E5C600775AC4 /* VenueGigListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueGigListController.swift; sourceTree = "<group>"; };
 		9728CB7A1972E27600B76241 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		9728CB7C1972EA9300B76241 /* next_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_blue.png; sourceTree = "<group>"; };
 		9728CB7E1972EC0700B76241 /* media-fast-forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "media-fast-forward.png"; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				972881C91A48BF7100775AC4 /* VenuesController.swift */,
 				972881CB1A48CA7B00775AC4 /* Venue.swift */,
 				972881CD1A48DFF100775AC4 /* MusicScene.swift */,
+				972881D11A48E5C600775AC4 /* VenueGigListController.swift */,
 			);
 			path = radiohere;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				97A30F47194DB566006FB314 /* base64.c in Sources */,
 				977A7D84194D7C7600EBE53A /* AppDelegate.swift in Sources */,
 				9728CB7B1972E27600B76241 /* Track.swift in Sources */,
+				972881D21A48E5C600775AC4 /* VenueGigListController.swift in Sources */,
 				972881CA1A48BF7100775AC4 /* VenuesController.swift in Sources */,
 				97A30F54194DDEF9006FB314 /* NSDateExt.swift in Sources */,
 				9765D18C197194EC00ECD5A2 /* TSQCalendarCell.m in Sources */,

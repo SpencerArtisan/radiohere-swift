@@ -53,5 +53,12 @@ class VenuesController: UITableViewController {
         cell.textLabel?.text = "\(venue.name) (\(venue.distance)km)"
         return cell
     }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let venue = self.musicScene.getVenues()[indexPath.row] as Venue    
+        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
+        secondViewController.gigs = self.musicScene.getGigsAt(venue)
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+    }
 }
 

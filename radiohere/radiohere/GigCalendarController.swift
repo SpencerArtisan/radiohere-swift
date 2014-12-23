@@ -51,11 +51,9 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     }
 
     func calendarView(calendarView: TSQCalendarView, didSelectDate date: NSDate) {
-        let gigs = self.musicScene.tableData[date]
         let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
-        secondViewController.gigs = gigs!
+        secondViewController.gigs = self.musicScene.getGigsOn(date)
         self.navigationController?.pushViewController(secondViewController, animated: true)
-        
     }
 
     func openWebSocket() {

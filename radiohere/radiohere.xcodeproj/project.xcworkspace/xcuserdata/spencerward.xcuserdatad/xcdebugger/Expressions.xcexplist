@@ -3,6 +3,50 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[KalView addSubviewsToHeaderView:]:KalView.m">
+      </ContextState>
+      <ContextState
+         contextName = "radiohere.ViewController.webSocket (radiohere.ViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SRWebSocket&gt;, didReceiveMessage : Swift.AnyObject) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "artists">
+            </PersistentString>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "radiohere.Venue.isEqual (radiohere.Venue)(Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; Swift.Bool:Venue.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "anObject as Venue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "radiohere.DetailViewController.playTrack (radiohere.DetailViewController)() -&gt; ():DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selected!.tracks()[trackIndex].streamUrl()">
+            </PersistentString>
+            <PersistentString
+               value = "audioPlayer.status">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "radiohere.MusicScene.add (radiohere.MusicScene)(radiohere.Gig) -&gt; ():MusicScene.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "gigsByVenue[venue]">
+            </PersistentString>
+            <PersistentString
+               value = "gigsByVenue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "radiohere.ViewController.tableView (radiohere.ViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UITableView&gt;, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int:ViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -17,35 +61,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[KalView addSubviewsToHeaderView:]:KalView.m">
-      </ContextState>
-      <ContextState
          contextName = "-[KalLogic selectedMonthNameAndYear]:KalLogic.m">
          <PersistentStrings>
             <PersistentString
                value = "[monthAndYearFormatter stringFromDate:self.baseDate]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "radiohere.ViewController.webSocket (radiohere.ViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SRWebSocket&gt;, didReceiveMessage : Swift.AnyObject) -&gt; ():ViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "artists">
-            </PersistentString>
-            <PersistentString
-               value = "">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "radiohere.DetailViewController.playTrack (radiohere.DetailViewController)() -&gt; ():DetailViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "selected!.tracks()[trackIndex].streamUrl()">
-            </PersistentString>
-            <PersistentString
-               value = "audioPlayer.status">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

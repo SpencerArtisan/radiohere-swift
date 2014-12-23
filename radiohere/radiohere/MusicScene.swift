@@ -10,7 +10,8 @@ import Foundation
 
 class MusicScene {
     var allGigs: [Gig] = []
-    var tableData = Dictionary<NSDate, NSMutableArray>()
+    var gigsByDate = Dictionary<NSDate, NSMutableArray>()
+    var gigsByVenue = Dictionary<Venue, NSMutableArray>()
 
     
     func add(gig: Gig) {
@@ -18,36 +19,49 @@ class MusicScene {
             self.allGigs.append(gig)
 
             var gigs : NSMutableArray
-            if (tableData[gig.nsDate()] != nil) {
-                gigs = tableData[gig.nsDate()]!
+            if (gigsByDate[gig.nsDate()] != nil) {
+                gigs = gigsByDate[gig.nsDate()]!
                 gigs.addObject(gig)
-                tableData[gig.nsDate()] = gigs
+                gigsByDate[gig.nsDate()] = gigs
             } else {
                 gigs = NSMutableArray()
                 gigs.addObject(gig)
-                tableData[gig.nsDate()] = gigs
+                gigsByDate[gig.nsDate()] = gigs
             }
+
+            var venue = Venue(gig: gig as Gig)
+            if (gigsByVenue[venue] != nil) {
+                println("Adding matched venue" + venue.name)
+                gigs = gigsByVenue[venue]!
+                gigs.addObject(gig)
+                gigsByVenue[venue] = gigs
+            } else {
+                println("Adding new venue" + venue.name)
+                gigs = NSMutableArray()
+                gigs.addObject(gig)
+                gigsByVenue[venue] = gigs
+            }
+        
         }
     }
     
     func hasGigOn(date: NSDate) -> Bool {
-        return self.tableData[date] != nil
+        return self.gigsByDate[date] != nil
     }
     
+    func getGigsOn(date: NSDate) -> NSMutableArray {
+        return self.gigsByDate[date]!
+    }
+    
+    func getGigsAt(venue: Venue) -> NSMutableArray {
+        return self.gigsByVenue[venue]!
+    }
     
     func getVenues() -> [Venue] {
-        var venues2 = self.allGigs.reduce(NSMutableArray()) {(venues, gig) in
-            var venue = Venue(gig: gig as Gig)
-            if (!venues.containsObject(venue)) {
-                venues.addObject(venue)
-            }
-            return venues
-        }
-        var venues3 = venues2 as AnyObject as [Venue]
-        venues3.sort({ (a:Venue, b:Venue) -> Bool in
+        var venues = self.gigsByVenue.keys.array
+        venues.sort({ (a:Venue, b:Venue) -> Bool in
             return (a.distance as NSString).floatValue < (b.distance as NSString).floatValue
         })
-        return venues3
+        return venues
     }
-
 }
