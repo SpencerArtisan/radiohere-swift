@@ -39,7 +39,7 @@ class Gig {
     }
 
     func date() -> String {
-        return nsDate().format("dd MMM")
+        return nsDate().format("EEE dd MMM")
     }
     
     func hasTrack() -> Bool {

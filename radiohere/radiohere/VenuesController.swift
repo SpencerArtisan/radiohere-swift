@@ -12,20 +12,11 @@ import AVFoundation
 class VenuesController: UITableViewController {
     var timer : NSTimer = NSTimer()
     
-    var musicScene: MusicScene = MusicScene() {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
-    }
-    
-    func configureView() {
-    }
+    var musicScene: MusicScene = MusicScene()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
         timer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     }
     

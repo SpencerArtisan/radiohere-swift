@@ -53,7 +53,7 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     func calendarView(calendarView: TSQCalendarView, didSelectDate date: NSDate) {
         let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
         secondViewController.gigs = self.musicScene.getGigsOn(date)
-        secondViewController.showByDate(date.format("dd MMM"))
+        secondViewController.showByDate(date.format("EEE dd MMM"))
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
 

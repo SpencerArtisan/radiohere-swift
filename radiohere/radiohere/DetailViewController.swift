@@ -14,6 +14,7 @@ class DetailViewController: UITableViewController {
     var selected : Gig?
     var trackIndex = 0
     var timer : NSTimer = NSTimer()
+    var byVenue : Bool = false
     
     @IBOutlet var myPlayer: UIView?
     @IBOutlet var songTitle: UILabel?
@@ -38,10 +39,12 @@ class DetailViewController: UITableViewController {
     
     func showByVenue(venue: String) {
         self.navigationItem.title = venue
+        byVenue = true
     }
     
     func showByDate(date: String) {
         self.navigationItem.title = date
+        byVenue = false
     }
 
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath
@@ -104,7 +107,12 @@ class DetailViewController: UITableViewController {
         let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCell")
         let gig = gigs[indexPath.row] as Gig
         cell.textLabel?.text = gig.artist()
-        cell.detailTextLabel?.text = "\(gig.venue()) (\(gig.distance())km)"
+        if byVenue {
+            cell.detailTextLabel?.text = "\(gig.date())"
+        } else {
+            cell.detailTextLabel?.text = "\(gig.venue()) (\(gig.distance())km)"
+        }
+        
         return cell
     }
 }
