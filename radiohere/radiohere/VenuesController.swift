@@ -12,6 +12,8 @@ import AVFoundation
 class VenuesController: UITableViewController {
     var timer : NSTimer = NSTimer()
     
+    @IBOutlet weak var locationLabel: UILabel!
+    
     var musicScene: MusicScene = MusicScene()
     
     @IBAction func onClickDates(sender: AnyObject) {
@@ -35,8 +37,20 @@ class VenuesController: UITableViewController {
         var modeBar = NSBundle.mainBundle().loadNibNamed("VenueMode", owner: self, options: nil)[0] as UIView
         showBottomBar(modeBar)
         self.navigationItem.hidesBackButton = true
+
+        var locationBar = NSBundle.mainBundle().loadNibNamed("LocationView2", owner: self, options: nil)[0] as UIView
+        showTopBar(locationBar)
+        locationLabel.textColor = UIColor.innocence()
     }
     
+    func showTopBar(view: UIView) {
+        view.frame = CGRectMake(0, 0, 380, 40)
+        self.navigationItem.titleView = view
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
+        self.navigationController?.navigationBar.barTintColor = UIColor.pachyderm()
+        self.navigationController?.navigationBar.tintColor = UIColor.innocence()
+    }
+
     func showBottomBar(view: UIView) {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
         self.navigationController?.toolbar.barStyle = UIBarStyle.BlackTranslucent

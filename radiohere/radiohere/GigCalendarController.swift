@@ -16,6 +16,8 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     var socket = SRWebSocket()
     var musicScene = MusicScene()
     
+    @IBOutlet weak var locationLabel: UILabel!
+    
     override func viewDidLoad() {
         openWebSocket()
         initCalendar()
@@ -34,16 +36,23 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         
         var modeBar = NSBundle.mainBundle().loadNibNamed("DateMode", owner: self, options: nil)[0] as UIView
         showBottomBar(modeBar)
-//        modeBar.frame = CGRectMake(0, 0, 380, 40)
-//        self.navigationItem.titleView = modeBar
+
+        var locationBar = NSBundle.mainBundle().loadNibNamed("LocationView", owner: self, options: nil)[0] as UIView
+        showTopBar(locationBar)
+        locationLabel.textColor = UIColor.innocence()
+    }
+    
+    func showTopBar(view: UIView) {
+        view.frame = CGRectMake(0, 0, 380, 40)
+        self.navigationItem.titleView = view
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
         self.navigationController?.navigationBar.barTintColor = UIColor.pachyderm()
+        self.navigationController?.navigationBar.tintColor = UIColor.innocence()
     }
     
     func showBottomBar(view: UIView) {
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
         self.navigationController?.toolbar.barStyle = UIBarStyle.BlackTranslucent
         self.navigationController?.toolbar.barTintColor = UIColor.pachyderm()
-        self.navigationController?.navigationBar.tintColor = UIColor.innocence()
         navigationController?.toolbarHidden = false
         var myItems = NSMutableArray()
         view.frame = CGRectMake(0, 0, 320, 40)

@@ -81,10 +81,10 @@ class DetailViewController: UITableViewController {
         showBottomBar(myPlayer)
         
         self.view.backgroundColor = UIColor.bond()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
         self.navigationController?.toolbar.barStyle = UIBarStyle.BlackTranslucent
         self.navigationController?.toolbar.barTintColor = UIColor.pachyderm()
-        self.navigationController?.navigationBar.tintColor = UIColor.innocence()
+//        self.navigationController?.navigationBar.tintColor = UIColor.innocence()
     }
     
     func showBottomBar(view: UIView) {
