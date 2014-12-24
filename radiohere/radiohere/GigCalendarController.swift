@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarViewDelegate {
     let SERVER = "ws://radiohere.herokuapp.com/game"
     
@@ -26,15 +28,36 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         calendar.lastDate = NSDate().addMonth(1)
         calendar.selectedDate = nil
         calendar.delegate = self
+        calendar.backgroundColor = UIColor.bond()
+        calendar.tintColor = UIColor.bond()
         self.view = calendar
         
         var modeBar = NSBundle.mainBundle().loadNibNamed("DateMode", owner: self, options: nil)[0] as UIView
-        modeBar.frame = CGRectMake(0, 0, 320, 40)
-        self.navigationItem.titleView = modeBar
+        showBottomBar(modeBar)
+//        modeBar.frame = CGRectMake(0, 0, 380, 40)
+//        self.navigationItem.titleView = modeBar
+        self.navigationController?.navigationBar.barTintColor = UIColor.pachyderm()
     }
     
+    func showBottomBar(view: UIView) {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
+        self.navigationController?.toolbar.barStyle = UIBarStyle.BlackTranslucent
+        self.navigationController?.toolbar.barTintColor = UIColor.pachyderm()
+        self.navigationController?.navigationBar.tintColor = UIColor.innocence()
+        navigationController?.toolbarHidden = false
+        var myItems = NSMutableArray()
+        view.frame = CGRectMake(0, 0, 320, 40)
+        var item = UIBarButtonItem(customView: view)
+        myItems.addObject(item)
+        toolbarItems = myItems
+    }
+
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+        
     override func viewDidAppear(animated: Bool) {
-        navigationController?.toolbarHidden = true
+//        navigationController?.toolbarHidden = true
     }
 
     @IBAction func onClickVenue(sender: AnyObject) {

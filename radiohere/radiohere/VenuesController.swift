@@ -18,8 +18,12 @@ class VenuesController: UITableViewController {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+
     override func viewDidAppear(animated: Bool) {
-        navigationController?.toolbarHidden = true
+//        navigationController?.toolbarHidden = true
     }
 
     override func viewDidLoad() {
@@ -29,11 +33,21 @@ class VenuesController: UITableViewController {
         timer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     
         var modeBar = NSBundle.mainBundle().loadNibNamed("VenueMode", owner: self, options: nil)[0] as UIView
-        modeBar.frame = CGRectMake(0, 0, 320, 40)
-//        self.navigationController?.setNavigationBarHidden(true, animated: false)
-//        self.view.addSubview(modeBar)
-        self.navigationItem.titleView = modeBar
+        showBottomBar(modeBar)
         self.navigationItem.hidesBackButton = true
+    }
+    
+    func showBottomBar(view: UIView) {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
+        self.navigationController?.toolbar.barStyle = UIBarStyle.BlackTranslucent
+        self.navigationController?.toolbar.barTintColor = UIColor.pachyderm()
+        self.navigationController?.navigationBar.tintColor = UIColor.innocence()
+        navigationController?.toolbarHidden = false
+        var myItems = NSMutableArray()
+        view.frame = CGRectMake(0, 0, 320, 40)
+        var item = UIBarButtonItem(customView: view)
+        myItems.addObject(item)
+        toolbarItems = myItems
     }
     
     func update() {
@@ -53,6 +67,8 @@ class VenuesController: UITableViewController {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "MyCell")
         let venue = self.musicScene.getVenues()[indexPath.row] as Venue
         cell.textLabel?.text = "\(venue.name) (\(venue.distance)km)"
+        cell.textLabel?.textColor = UIColor.pachyderm()
+        cell.backgroundColor = UIColor.bond()
         return cell
     }
 

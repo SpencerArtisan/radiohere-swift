@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "radiohere.GigCalendarController.initCalendar (radiohere.GigCalendarController)() -&gt; ():GigCalendarController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationItem.titleView">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController?.navigationBar">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[KalView addSubviewsToHeaderView:]:KalView.m">
       </ContextState>
       <ContextState
@@ -47,6 +58,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[KalLogic selectedMonthNameAndYear]:KalLogic.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[monthAndYearFormatter stringFromDate:self.baseDate]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "radiohere.ViewController.tableView (radiohere.ViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UITableView&gt;, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int:ViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -57,14 +76,6 @@
             </PersistentString>
             <PersistentString
                value = "(Swift.Dictionary&lt;Swift.String, Swift.Array&lt;radiohere.Artist&gt;&gt;)self.tableData">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[KalLogic selectedMonthNameAndYear]:KalLogic.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[monthAndYearFormatter stringFromDate:self.baseDate]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

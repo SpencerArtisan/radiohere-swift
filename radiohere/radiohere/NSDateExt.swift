@@ -10,6 +10,32 @@ import Foundation
 
 let formatter: NSDateFormatter = NSDateFormatter()
 
+extension UIColor {
+    class func fromRGB(r:Double, g: Double, b: Double, a: Double) -> UIColor {
+        return UIColor(red: CGFloat(r/255), green: CGFloat(g/255), blue: CGFloat(b/255), alpha: CGFloat(a))
+    }
+    
+    class func innocence(a: Double = 1) -> UIColor {
+        return fromRGB(217, g: 206, b: 178, a: a)
+    }
+    
+    class func kindGiant(a: Double = 1) -> UIColor {
+        return fromRGB(148, g: 140, b: 117, a: a)
+    }
+    
+    class func bond(a: Double = 1) -> UIColor {
+        return fromRGB(213, g: 222, b: 217, a: a)
+    }
+    
+    class func pachyderm(a: Double = 1) -> UIColor {
+        return fromRGB(122, g: 106, b: 83, a: a)
+    }
+    
+    class func forever(a: Double = 1) -> UIColor {
+        return fromRGB(153, g: 178, b: 183, a: a)
+    }
+}
+
 extension NSDate {
     convenience
         init(dateString:String) {
@@ -123,30 +149,3 @@ extension Int {
     
 }
 
-//@infix func + (left: NSDateComponents, right: NSDateComponents) -> NSDateComponents {
-//    func addIfPossible(left: NSInteger, right:NSInteger) -> NSInteger {
-//        if left == NSUndefinedDateComponent && right == NSUndefinedDateComponent {
-//            return NSUndefinedDateComponent
-//        }
-//        if left == NSUndefinedDateComponent {
-//            return right
-//        }
-//        if right == NSUndefinedDateComponent {
-//            return left
-//        }
-//        return left + right
-//    }
-//    
-//    var components = NSDateComponents()
-//    components.year         = addIfPossible(left.year, right.year)
-//    components.month        = addIfPossible(left.month, right.month)
-//    components.weekOfYear   = addIfPossible(left.weekOfYear, right.weekOfYear)
-//    components.day          = addIfPossible(left.day, right.day)
-//    components.hour         = addIfPossible(left.hour, right.hour)
-//    components.minute       = addIfPossible(left.minute, right.minute)
-//    components.second       = addIfPossible(left.second, right.second)
-//    components.nanosecond   = addIfPossible(left.nanosecond, right.nanosecond)
-//    
-//    return components
-//    
-//}

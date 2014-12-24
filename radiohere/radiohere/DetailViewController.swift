@@ -59,8 +59,13 @@ class DetailViewController: UITableViewController {
         audioPlayer = AVPlayer(URL: url)
         audioPlayer.play()
         songTitle?.text = selected!.tracks()[trackIndex].name()
+        songTitle?.textColor = UIColor.innocence()
         nextTrack?.hidden = false
         tickets?.hidden = false
+    }
+
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -73,11 +78,20 @@ class DetailViewController: UITableViewController {
         timer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         
         var myPlayer = NSBundle.mainBundle().loadNibNamed("PlayerView", owner: self, options: nil)[0] as UIView
-        var myItems = NSMutableArray()
-        myPlayer.frame = CGRectMake(0, 0, 320, 40)
-        var item = UIBarButtonItem(customView: myPlayer)
-        myItems.addObject(item)
+        showBottomBar(myPlayer)
         
+        self.view.backgroundColor = UIColor.bond()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
+        self.navigationController?.toolbar.barStyle = UIBarStyle.BlackTranslucent
+        self.navigationController?.toolbar.barTintColor = UIColor.pachyderm()
+        self.navigationController?.navigationBar.tintColor = UIColor.innocence()
+    }
+    
+    func showBottomBar(view: UIView) {
+        var myItems = NSMutableArray()
+        view.frame = CGRectMake(0, 0, 320, 40)
+        var item = UIBarButtonItem(customView: view)
+        myItems.addObject(item)
         toolbarItems = myItems
     }
     
@@ -110,6 +124,9 @@ class DetailViewController: UITableViewController {
         let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCell")
         let gig = gigs[indexPath.row] as Gig
         cell.textLabel?.text = gig.artist()
+        cell.textLabel?.textColor = UIColor.pachyderm()
+        cell.detailTextLabel?.textColor = UIColor.pachyderm(a: 0.8)
+        cell.backgroundColor = UIColor.bond()
         if byVenue {
             cell.detailTextLabel?.text = "\(gig.date())"
         } else {
