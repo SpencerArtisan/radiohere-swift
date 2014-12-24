@@ -7,8 +7,17 @@
 //
 
 import Foundation
+import CoreLocation
 
 let formatter: NSDateFormatter = NSDateFormatter()
+
+// For simulation mode
+extension CLLocationManager {
+    func startUpdatingLocation() {
+        var fakeLocation = CLLocation(latitude: 51.484225, longitude: -0.022034)
+        self.delegate.locationManager!(self, didUpdateLocations: [fakeLocation])
+    }
+}
 
 extension UIColor {
     class func fromRGB(r:Double, g: Double, b: Double, a: Double) -> UIColor {

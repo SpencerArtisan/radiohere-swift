@@ -17,6 +17,7 @@
 		9728CB7F1972EC0700B76241 /* media-fast-forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728CB7E1972EC0700B76241 /* media-fast-forward.png */; };
 		975558A71A4B3378000F25BF /* LocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975558A61A4B3378000F25BF /* LocationView.xib */; };
 		975558A91A4B3C77000F25BF /* LocationView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975558A81A4B3C77000F25BF /* LocationView2.xib */; };
+		975558AB1A4B5525000F25BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975558AA1A4B5525000F25BF /* CoreLocation.framework */; };
 		9765D152197053FD00ECD5A2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D151197053FD00ECD5A2 /* DetailViewController.swift */; };
 		9765D1541970540400ECD5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9765D1531970540400ECD5A2 /* Main.storyboard */; };
 		9765D1801970A34A00ECD5A2 /* GigCalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D17F1970A34A00ECD5A2 /* GigCalendarController.swift */; };
@@ -78,6 +79,7 @@
 		9728CB7E1972EC0700B76241 /* media-fast-forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "media-fast-forward.png"; sourceTree = "<group>"; };
 		975558A61A4B3378000F25BF /* LocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView.xib; sourceTree = "<group>"; };
 		975558A81A4B3C77000F25BF /* LocationView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView2.xib; sourceTree = "<group>"; };
+		975558AA1A4B5525000F25BF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9765D151197053FD00ECD5A2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9765D1531970540400ECD5A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9765D17F1970A34A00ECD5A2 /* GigCalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GigCalendarController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975558AB1A4B5525000F25BF /* CoreLocation.framework in Frameworks */,
 				979D1B3E1A484ADF00241C33 /* AVFoundation.framework in Frameworks */,
 				97A30F50194DB675006FB314 /* Foundation.framework in Frameworks */,
 				97A30F4E194DB66E006FB314 /* Security.framework in Frameworks */,
@@ -176,6 +179,7 @@
 		977A7D75194D7C7600EBE53A = {
 			isa = PBXGroup;
 			children = (
+				975558AA1A4B5525000F25BF /* CoreLocation.framework */,
 				979D1B3D1A484ADF00241C33 /* AVFoundation.framework */,
 				9765D181197194EC00ECD5A2 /* TimesSquare */,
 				97A30F4F194DB675006FB314 /* Foundation.framework */,

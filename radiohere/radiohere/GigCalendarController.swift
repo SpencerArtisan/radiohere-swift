@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import CoreLocation
 
 
-class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarViewDelegate {
+class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarViewDelegate, CLLocationManagerDelegate {
     let SERVER = "ws://radiohere.herokuapp.com/game"
     
     var socket = SRWebSocket()
     var musicScene = MusicScene()
+    var locationManager = CLLocationManager()
     var location = "51.5403,-0.0884,5.0"
+    var here: CLLocation!
     
     //        socket.send("51.5262,-0.05938,5.0") // BETHNAL GREEN
     //socket.send("51.5403,-0.0884,5.0") // YEATE
@@ -25,6 +28,11 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var nameTextBox: UITextField!
     @IBOutlet weak var locationLabel: UILabel!
+    
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        here = locations[0] as CLLocation
+    }
     
     @IBAction func addLocation(sender: AnyObject) {
         nameTextBox.hidden = false
@@ -38,7 +46,7 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         addButton.hidden = false
         okButton.hidden = true
         locationLabel.text = nameTextBox.text
-        location = "51.484225,-0.022034,20"
+        location = "\(here!.coordinate.latitude),\(here!.coordinate.longitude),5"
         musicScene = MusicScene()
         closeWebSocket()
         openWebSocket()
@@ -46,6 +54,8 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     
     
     override func viewDidLoad() {
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()        
         openWebSocket()
         initCalendar()
         super.viewDidLoad()
