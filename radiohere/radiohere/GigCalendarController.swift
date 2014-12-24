@@ -9,14 +9,31 @@
 import UIKit
 
 
-
 class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarViewDelegate {
     let SERVER = "ws://radiohere.herokuapp.com/game"
     
     var socket = SRWebSocket()
     var musicScene = MusicScene()
     
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var okButton: UIButton!
+    @IBOutlet weak var nameTextBox: UITextField!
     @IBOutlet weak var locationLabel: UILabel!
+    
+    @IBAction func addLocation(sender: AnyObject) {
+        nameTextBox.hidden = false
+        addButton.hidden = true
+        okButton.hidden = false
+        nameTextBox.becomeFirstResponder()
+    }
+    
+    @IBAction func acceptLocation(sender: AnyObject) {
+        nameTextBox.hidden = true
+        addButton.hidden = false
+        okButton.hidden = true
+        locationLabel.text = nameTextBox.text
+    }
+    
     
     override func viewDidLoad() {
         openWebSocket()
