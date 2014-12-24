@@ -14,6 +14,12 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     
     var socket = SRWebSocket()
     var musicScene = MusicScene()
+    var location = "51.5403,-0.0884,5.0"
+    
+    //        socket.send("51.5262,-0.05938,5.0") // BETHNAL GREEN
+    //socket.send("51.5403,-0.0884,5.0") // YEATE
+    //        socket.send("51.5265,-0.0825,2.0") // OLD STREET
+    //        socket.send("51.484225,-0.022034,20") // LEON
     
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var okButton: UIButton!
@@ -32,6 +38,10 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         addButton.hidden = false
         okButton.hidden = true
         locationLabel.text = nameTextBox.text
+        location = "51.484225,-0.022034,20"
+        musicScene = MusicScene()
+        closeWebSocket()
+        openWebSocket()
     }
     
     
@@ -110,12 +120,13 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         socket.open()
     }
     
+    func closeWebSocket() {
+        socket.close()
+    }
+    
     func webSocketDidOpen(socket: SRWebSocket!) {
         println("Socket Open!")
-//        socket.send("51.5262,-0.05938,5.0") // BETHNAL GREEN
-        socket.send("51.5403,-0.0884,5.0") // YEATE
-//        socket.send("51.5265,-0.0825,2.0") // OLD STREET
-//        socket.send("51.484225,-0.022034,20") // LEON
+        socket.send(location) // YEATE
         var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateTable"), userInfo: nil, repeats: true)
     }
     
