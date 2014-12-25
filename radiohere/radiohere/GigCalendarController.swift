@@ -13,11 +13,14 @@ import CoreLocation
 class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarViewDelegate, CLLocationManagerDelegate {
     let SERVER = "ws://radiohere.herokuapp.com/game"
     
-    var socket = SRWebSocket()
+    var location: String?
+    var locationName: String?
+    var socket: SRWebSocket?
     var musicScene = MusicScene()
     var locationManager = CLLocationManager()
-    var location = "51.5403,-0.0884,5.0"
+    var locationIndex = 0
     var here: CLLocation!
+    var userLocations: [String] = []
     
     //        socket.send("51.5262,-0.05938,5.0") // BETHNAL GREEN
     //socket.send("51.5403,-0.0884,5.0") // YEATE
@@ -45,20 +48,41 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         nameTextBox.hidden = true
         addButton.hidden = false
         okButton.hidden = true
-        locationLabel.text = nameTextBox.text
-        location = "\(here!.coordinate.latitude),\(here!.coordinate.longitude),5"
-        musicScene = MusicScene()
-        closeWebSocket()
-        openWebSocket()
+        var locationString = "\(nameTextBox.text):\(here!.coordinate.latitude),\(here!.coordinate.longitude),5"
+        userLocations.append(locationString)
+        onLocationChange()
     }
     
     
     override func viewDidLoad() {
-        locationManager.delegate = self
-        locationManager.startUpdatingLocation()        
-        openWebSocket()
-        initCalendar()
         super.viewDidLoad()
+
+        readUserLocations()
+        onLocationChange()
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        initCalendar()
+    }
+    
+    func readUserLocations() {
+        var path = NSBundle.mainBundle().pathForResource("Data", ofType: "plist")
+        var props = NSDictionary(contentsOfFile: path!)
+        userLocations = props?.valueForKey("Locations") as [String]
+    }
+    
+    func onLocationChange() {
+        musicScene = MusicScene()
+        updateLocation()
+        closeWebSocket()
+        openWebSocket()
+    }
+    
+    func updateLocation() {
+        var locationDetails = userLocations[locationIndex]
+        let split = locationDetails.rangeOfString(":")!.startIndex
+        let name: String = locationDetails.substringWithRange(Range<String.Index>(start: locationDetails.startIndex, end: split))
+        location = locationDetails.substringWithRange(Range<String.Index>(start: split.successor(), end: locationDetails.endIndex))
+        locationName = name
     }
     
     func initCalendar() {
@@ -126,17 +150,20 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
 
     func openWebSocket() {
         socket = SRWebSocket(URL: NSURL(string: SERVER))
-        socket.delegate = self
-        socket.open()
+        socket?.delegate = self
+        socket?.open()
     }
     
     func closeWebSocket() {
-        socket.close()
+        if (socket != nil) {
+            socket?.close()
+        }
     }
     
     func webSocketDidOpen(socket: SRWebSocket!) {
         println("Socket Open!")
-        socket.send(location) // YEATE
+        socket.send(location)
+        locationLabel.text = locationName
         var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateTable"), userInfo: nil, repeats: true)
     }
     

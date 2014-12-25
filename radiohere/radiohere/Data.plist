@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Locations</key>
+	<array>
+		<string>Yeate Street:51.5403,-0.0884,5.0</string>
+		<string>Gerrard Road:51.5338,-0.1012,5.0</string>
+		<string>Greenwich:51.484225,-0.022034,20</string>
+	</array>
+</dict>
+</plist>
