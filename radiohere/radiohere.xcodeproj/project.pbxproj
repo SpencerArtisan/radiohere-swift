@@ -16,6 +16,7 @@
 		9728CB7D1972EA9300B76241 /* next_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728CB7C1972EA9300B76241 /* next_blue.png */; };
 		9728CB7F1972EC0700B76241 /* media-fast-forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728CB7E1972EC0700B76241 /* media-fast-forward.png */; };
 		973557A51A4C77FD00DD8FEA /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973557A41A4C77FD00DD8FEA /* LocationController.swift */; };
+		973557A71A4C8F6900DD8FEA /* ControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973557A61A4C8F6900DD8FEA /* ControllerHelper.swift */; };
 		975558A71A4B3378000F25BF /* LocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975558A61A4B3378000F25BF /* LocationView.xib */; };
 		975558A91A4B3C77000F25BF /* LocationView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975558A81A4B3C77000F25BF /* LocationView2.xib */; };
 		975558AB1A4B5525000F25BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975558AA1A4B5525000F25BF /* CoreLocation.framework */; };
@@ -80,6 +81,7 @@
 		9728CB7C1972EA9300B76241 /* next_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_blue.png; sourceTree = "<group>"; };
 		9728CB7E1972EC0700B76241 /* media-fast-forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "media-fast-forward.png"; sourceTree = "<group>"; };
 		973557A41A4C77FD00DD8FEA /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		973557A61A4C8F6900DD8FEA /* ControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerHelper.swift; sourceTree = "<group>"; };
 		975558A61A4B3378000F25BF /* LocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView.xib; sourceTree = "<group>"; };
 		975558A81A4B3C77000F25BF /* LocationView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView2.xib; sourceTree = "<group>"; };
 		975558AA1A4B5525000F25BF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -235,6 +237,7 @@
 				975558A61A4B3378000F25BF /* LocationView.xib */,
 				975558A81A4B3C77000F25BF /* LocationView2.xib */,
 				973557A41A4C77FD00DD8FEA /* LocationController.swift */,
+				973557A61A4C8F6900DD8FEA /* ControllerHelper.swift */,
 			);
 			path = radiohere;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				972881CE1A48DFF100775AC4 /* MusicScene.swift in Sources */,
 				973557A51A4C77FD00DD8FEA /* LocationController.swift in Sources */,
 				9765D1801970A34A00ECD5A2 /* GigCalendarController.swift in Sources */,
+				973557A71A4C8F6900DD8FEA /* ControllerHelper.swift in Sources */,
 				9765D18D197194EC00ECD5A2 /* TSQCalendarMonthHeaderCell.m in Sources */,
 				97A30F52194DD739006FB314 /* Gig.swift in Sources */,
 				97A30F48194DB566006FB314 /* NSData+SRB64Additions.m in Sources */,

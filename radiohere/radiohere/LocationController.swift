@@ -131,5 +131,12 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         here = locations[0] as CLLocation
     }
     
+    func webSocket(webSocket: SRWebSocket!, didFailWithError error: NSError) {
+        println("Error: \(error.description)")
+    }
+    
+    func webSocket(webSocket: SRWebSocket!, didCloseWithCode code: NSInteger, reason: NSString) {
+        println("Close")
+    }
 
 }

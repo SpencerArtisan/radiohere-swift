@@ -12,12 +12,15 @@ import CoreLocation
 
 class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
     var locationController = LocationController()
+    var helper: ControllerHelper?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        helper = ControllerHelper(controller: self)
         initCalendar()
+        initModeBar()
+        initLocationBar()
         locationController.viewDidLoad()
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateTable"), userInfo: nil, repeats: true)
     }
     
     
@@ -30,37 +33,23 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
         calendar.backgroundColor = UIColor.bond()
         calendar.tintColor = UIColor.bond()
         self.view = calendar
-        
+        NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateCalendar"), userInfo: nil, repeats: true)
+    }
+
+    func updateCalendar() {
+        (self.view as TSQCalendarView).tableView.reloadData()
+    }
+    
+    func initModeBar() {
         var modeBar = NSBundle.mainBundle().loadNibNamed("DateMode", owner: self, options: nil)[0] as UIView
-        showBottomBar(modeBar)
-
+        helper?.showBottomBar(modeBar)
+    }
+    
+    func initLocationBar() {
         var locationBar = NSBundle.mainBundle().loadNibNamed("LocationView", owner: locationController, options: nil)[0] as UIView
-        showTopBar(locationBar)
+        helper?.showTopBar(locationBar)
     }
     
-    func showTopBar(view: UIView) {
-        view.frame = CGRectMake(0, 0, 380, 40)
-        self.navigationItem.titleView = view
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
-        self.navigationController?.navigationBar.barTintColor = UIColor.pachyderm()
-        self.navigationController?.navigationBar.tintColor = UIColor.innocence()
-    }
-    
-    func showBottomBar(view: UIView) {
-        self.navigationController?.toolbar.barStyle = UIBarStyle.BlackTranslucent
-        self.navigationController?.toolbar.barTintColor = UIColor.pachyderm()
-        navigationController?.toolbarHidden = false
-        var myItems = NSMutableArray()
-        view.frame = CGRectMake(0, 0, 320, 40)
-        var item = UIBarButtonItem(customView: view)
-        myItems.addObject(item)
-        toolbarItems = myItems
-    }
-
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-        
     @IBAction func onClickVenue(sender: AnyObject) {
         let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("VenuesController") as VenuesController
         secondViewController.musicScene = locationController.musicScene
@@ -79,16 +68,5 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
 
-    func updateTable() {
-        (self.view as TSQCalendarView).tableView.reloadData()
-    }
-    
-    func webSocket(webSocket: SRWebSocket!, didFailWithError error: NSError) {
-        println("Error: \(error.description)")
-    }
-    
-    func webSocket(webSocket: SRWebSocket!, didCloseWithCode code: NSInteger, reason: NSString) {
-        println("Close")
-    }
 }
 
