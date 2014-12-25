@@ -11,7 +11,7 @@ import CoreLocation
 
 class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManagerDelegate {
     let SERVER = "ws://radiohere.herokuapp.com/game"    
-    
+   
     var socket: SRWebSocket?
 
     @IBOutlet weak var addButton: UIButton!
@@ -43,6 +43,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     }
     
     @IBAction func addLocation(sender: AnyObject) {
+        nameTextBox.text = ""
         nameTextBox.hidden = false
         addButton.hidden = true
         okButton.hidden = false
@@ -50,11 +51,16 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         nameTextBox.becomeFirstResponder()
     }
     
+    @IBAction func hitEnter(sender: AnyObject) {
+        acceptLocation(sender)
+    }
+    
     @IBAction func acceptLocation(sender: AnyObject) {
+        nameTextBox.resignFirstResponder()
         nameTextBox.hidden = true
         addButton.hidden = false
-        nextButton.hidden = false
         okButton.hidden = true
+        nextButton.hidden = false
         var locationString = "\(nameTextBox.text):\(here!.coordinate.latitude),\(here!.coordinate.longitude),5"
         userLocations.append(locationString)
         saveUserLocations()

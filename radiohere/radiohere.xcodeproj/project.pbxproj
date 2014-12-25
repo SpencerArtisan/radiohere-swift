@@ -18,7 +18,6 @@
 		973557A51A4C77FD00DD8FEA /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973557A41A4C77FD00DD8FEA /* LocationController.swift */; };
 		973557A71A4C8F6900DD8FEA /* ControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973557A61A4C8F6900DD8FEA /* ControllerHelper.swift */; };
 		975558A71A4B3378000F25BF /* LocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975558A61A4B3378000F25BF /* LocationView.xib */; };
-		975558A91A4B3C77000F25BF /* LocationView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975558A81A4B3C77000F25BF /* LocationView2.xib */; };
 		975558AB1A4B5525000F25BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975558AA1A4B5525000F25BF /* CoreLocation.framework */; };
 		9765D152197053FD00ECD5A2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D151197053FD00ECD5A2 /* DetailViewController.swift */; };
 		9765D1541970540400ECD5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9765D1531970540400ECD5A2 /* Main.storyboard */; };
@@ -83,7 +82,6 @@
 		973557A41A4C77FD00DD8FEA /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		973557A61A4C8F6900DD8FEA /* ControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerHelper.swift; sourceTree = "<group>"; };
 		975558A61A4B3378000F25BF /* LocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView.xib; sourceTree = "<group>"; };
-		975558A81A4B3C77000F25BF /* LocationView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView2.xib; sourceTree = "<group>"; };
 		975558AA1A4B5525000F25BF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9765D151197053FD00ECD5A2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9765D1531970540400ECD5A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 				972881CD1A48DFF100775AC4 /* MusicScene.swift */,
 				97DCCA3A1A49CFBA001B691B /* VenueMode.xib */,
 				975558A61A4B3378000F25BF /* LocationView.xib */,
-				975558A81A4B3C77000F25BF /* LocationView2.xib */,
 				973557A41A4C77FD00DD8FEA /* LocationController.swift */,
 				973557A61A4C8F6900DD8FEA /* ControllerHelper.swift */,
 			);
@@ -367,7 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				975558A91A4B3C77000F25BF /* LocationView2.xib in Resources */,
 				97C254F7197B229500B1A8F1 /* songkick3.jpg in Resources */,
 				97C254F3197B21AF00B1A8F1 /* songkick.jpg in Resources */,
 				975558A71A4B3378000F25BF /* LocationView.xib in Resources */,
