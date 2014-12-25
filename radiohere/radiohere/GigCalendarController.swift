@@ -22,11 +22,6 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     var here: CLLocation!
     var userLocations: [String] = []
     
-    //        socket.send("51.5262,-0.05938,5.0") // BETHNAL GREEN
-    //socket.send("51.5403,-0.0884,5.0") // YEATE
-    //        socket.send("51.5265,-0.0825,2.0") // OLD STREET
-    //        socket.send("51.484225,-0.022034,20") // LEON
-    
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var nameTextBox: UITextField!
@@ -35,6 +30,11 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         here = locations[0] as CLLocation
+    }
+    
+    @IBAction func nextLocation(sender: AnyObject) {
+        locationIndex = (locationIndex + 1) % userLocations.count
+        onLocationChange()
     }
     
     @IBAction func addLocation(sender: AnyObject) {

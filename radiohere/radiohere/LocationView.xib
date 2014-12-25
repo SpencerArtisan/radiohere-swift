@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pl-f5-hWM">
-                    <rect key="frame" x="272" y="2" width="46" height="30"/>
+                    <rect key="frame" x="0.0" y="2" width="46" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="36"/>
                     <state key="normal" title="+">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,18 +34,28 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name your current location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDp-r4-bPN" userLabel="enterName">
-                    <rect key="frame" x="9" y="5" width="263" height="30"/>
+                    <rect key="frame" x="10" y="5" width="250" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUc-4S-6Zw" userLabel="okButton">
-                    <rect key="frame" x="272" y="5" width="46" height="30"/>
+                    <rect key="frame" x="269" y="5" width="46" height="30"/>
                     <accessibility key="accessibilityConfiguration" label="okButton"/>
                     <state key="normal" title="OK">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="acceptLocation:" destination="-1" eventType="touchUpInside" id="BO4-UL-fwA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFz-fE-BPI" userLabel="nextButton">
+                    <rect key="frame" x="266" y="2" width="46" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <state key="normal" title="&gt;">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextLocation:" destination="-1" eventType="touchUpInside" id="Cpm-MV-vAC"/>
                     </connections>
                 </button>
             </subviews>
