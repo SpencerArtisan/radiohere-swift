@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GigCalendarController" customModule="radiohere" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationController" customModule="radiohere" customModuleProvider="target">
             <connections>
                 <outlet property="addButton" destination="7Pl-f5-hWM" id="6Pv-OT-5Oz"/>
                 <outlet property="locationLabel" destination="a8L-VG-42S" id="cny-Vp-ibp"/>
