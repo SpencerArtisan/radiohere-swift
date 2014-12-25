@@ -10,11 +10,13 @@ import UIKit
 import AVFoundation
 
 class DetailViewController: UITableViewController {
+    var helper: ControllerHelper?
     var audioPlayer = AVPlayer()
     var selected : Gig?
     var trackIndex = 0
     var timer : NSTimer = NSTimer()
     var byVenue : Bool = false
+    var playerShown = false
     
     @IBOutlet var myPlayer: UIView?
     @IBOutlet var songTitle: UILabel?
@@ -51,6 +53,11 @@ class DetailViewController: UITableViewController {
         indexPath: NSIndexPath!) {
         trackIndex = 0
         selected = gigs[indexPath.row] as Gig
+
+        if (!playerShown) {
+            helper?.showBottomBar("PlayerView", owner: self)
+            playerShown = true
+        }
         playTrack()
     }
     
@@ -69,30 +76,19 @@ class DetailViewController: UITableViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        navigationController?.toolbarHidden = false
+        navigationController?.toolbarHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        helper = ControllerHelper(controller: self)
+
         timer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         
-        var myPlayer = NSBundle.mainBundle().loadNibNamed("PlayerView", owner: self, options: nil)[0] as UIView
-        showBottomBar(myPlayer)
-        
         self.view.backgroundColor = UIColor.bond()
-//        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
-        self.navigationController?.toolbar.barStyle = UIBarStyle.BlackTranslucent
-        self.navigationController?.toolbar.barTintColor = UIColor.pachyderm()
-//        self.navigationController?.navigationBar.tintColor = UIColor.innocence()
-    }
-    
-    func showBottomBar(view: UIView) {
-        var myItems = NSMutableArray()
-        view.frame = CGRectMake(0, 0, 320, 40)
-        var item = UIBarButtonItem(customView: view)
-        myItems.addObject(item)
-        toolbarItems = myItems
+//        self.navigationController?.toolbarHidden = true
+//        self.navigationController?.toolbar.hidden = true
     }
     
     func update() {
@@ -104,7 +100,6 @@ class DetailViewController: UITableViewController {
     override func viewDidDisappear(animated: Bool) {
         println("KILLING DETAIL VIEW \(self)")
         audioPlayer.pause()
-        navigationController?.toolbarHidden = true
     }
 
     override func didReceiveMemoryWarning() {

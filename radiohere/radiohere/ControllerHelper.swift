@@ -28,7 +28,7 @@ class ControllerHelper {
         var view = NSBundle.mainBundle().loadNibNamed(viewName, owner: owner, options: nil)[0] as UIView
         controller.navigationController?.toolbar.barStyle = UIBarStyle.BlackTranslucent
         controller.navigationController?.toolbar.barTintColor = UIColor.pachyderm()
-        controller.navigationController?.toolbarHidden = false
+        controller.navigationController?.setToolbarHidden(false, animated: true)
         var myItems = NSMutableArray()
         view.frame = CGRectMake(0, 0, 320, 40)
         var item = UIBarButtonItem(customView: view)
