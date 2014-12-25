@@ -15,7 +15,8 @@ class ControllerHelper {
         self.controller = controller
     }
     
-    func showTopBar(view: UIView) {
+    func showTopBar(viewName: String, owner: UIViewController) {
+        var view = NSBundle.mainBundle().loadNibNamed(viewName, owner: owner, options: nil)[0] as UIView
         view.frame = CGRectMake(0, 0, 380, 40)
         controller.navigationItem.titleView = view
         controller.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
@@ -23,7 +24,8 @@ class ControllerHelper {
         controller.navigationController?.navigationBar.tintColor = UIColor.innocence()
     }
     
-    func showBottomBar(view: UIView) {
+    func showBottomBar(viewName: String, owner: UIViewController) {
+        var view = NSBundle.mainBundle().loadNibNamed(viewName, owner: owner, options: nil)[0] as UIView
         controller.navigationController?.toolbar.barStyle = UIBarStyle.BlackTranslucent
         controller.navigationController?.toolbar.barTintColor = UIColor.pachyderm()
         controller.navigationController?.toolbarHidden = false

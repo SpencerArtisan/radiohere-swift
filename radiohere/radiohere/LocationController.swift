@@ -76,7 +76,6 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         
         props = NSDictionary(contentsOfFile: path)?.mutableCopy() as NSDictionary
         
-        
         userLocations = props?.valueForKey("Locations") as [String]
     }
     
@@ -86,7 +85,6 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         props?.setValue(userLocations, forKey: "Locations")
         props?.writeToFile(path, atomically: true)
     }
-    
     
     func onLocationChange() {
         musicScene = MusicScene()

@@ -14,6 +14,27 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
     var locationController = LocationController()
     var helper: ControllerHelper?
     
+    @IBAction func onClickVenue(sender: AnyObject) {
+        let gigListController = self.storyboard?.instantiateViewControllerWithIdentifier("VenuesController") as VenuesController
+        gigListController.musicScene = locationController.musicScene
+        self.navigationController?.pushViewController(gigListController, animated: true)
+    }
+    
+    func calendarView(calendarView: TSQCalendarView, shouldSelectDate date: NSDate) -> Bool {
+        return locationController.getMusicScene().hasGigOn(date)
+    }
+
+    func calendarView(calendarView: TSQCalendarView, didSelectDate date: NSDate) {
+        let gigListController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
+        gigListController.gigs = locationController.getMusicScene().getGigsOn(date)
+        gigListController.showByDate(date.format("EEE dd MMM"))
+        self.navigationController?.pushViewController(gigListController, animated: true)
+    }
+
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         helper = ControllerHelper(controller: self)
@@ -22,7 +43,6 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
         initLocationBar()
         locationController.viewDidLoad()
     }
-    
     
     func initCalendar() {
         var calendar = TSQCalendarView()
@@ -41,32 +61,11 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
     }
     
     func initModeBar() {
-        var modeBar = NSBundle.mainBundle().loadNibNamed("DateMode", owner: self, options: nil)[0] as UIView
-        helper?.showBottomBar(modeBar)
+        helper?.showBottomBar("DateMode", owner: self)
     }
     
     func initLocationBar() {
-        var locationBar = NSBundle.mainBundle().loadNibNamed("LocationView", owner: locationController, options: nil)[0] as UIView
-        helper?.showTopBar(locationBar)
+        helper?.showTopBar("LocationView", owner: locationController)
     }
-    
-    @IBAction func onClickVenue(sender: AnyObject) {
-        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("VenuesController") as VenuesController
-        secondViewController.musicScene = locationController.musicScene
-    
-        self.navigationController?.pushViewController(secondViewController, animated: true)
-    }
-    
-    func calendarView(calendarView: TSQCalendarView, shouldSelectDate date: NSDate) -> Bool {
-        return locationController.getMusicScene().hasGigOn(date)
-    }
-
-    func calendarView(calendarView: TSQCalendarView, didSelectDate date: NSDate) {
-        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
-        secondViewController.gigs = locationController.getMusicScene().getGigsOn(date)
-        secondViewController.showByDate(date.format("EEE dd MMM"))
-        self.navigationController?.pushViewController(secondViewController, animated: true)
-    }
-
 }
 
