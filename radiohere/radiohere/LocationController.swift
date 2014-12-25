@@ -29,6 +29,21 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     var here: CLLocation!
     var musicScene = MusicScene()
 
+    func setRelated(related: LocationController) {
+        location = related.location
+        locationName = related.locationName
+        locationIndex = related.locationIndex
+        socket = related.socket
+        props = related.props
+        userLocations = related.userLocations
+        locationManager = related.locationManager
+        musicScene = related.musicScene
+        here = related.here
+        if (locationLabel != nil) {
+            locationLabel.text = locationName
+        }
+    }
+    
     override func viewDidLoad() {
         readUserLocations()
         locationManager.delegate = self
@@ -96,6 +111,10 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         updateLocation()
         closeWebSocket()
         openWebSocket()
+        updateLabel()
+    }
+    
+    func updateLabel() {
         locationLabel.text = locationName
     }
     

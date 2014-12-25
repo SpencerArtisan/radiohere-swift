@@ -16,8 +16,12 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
     
     @IBAction func onClickVenue(sender: AnyObject) {
         let gigListController = self.storyboard?.instantiateViewControllerWithIdentifier("VenuesController") as VenuesController
-        gigListController.setLocationController(locationController)
+        gigListController.setRelatedLocationController(locationController)
         self.navigationController?.pushViewController(gigListController, animated: true)
+    }
+    
+    func setRelatedLocationController(locationController: LocationController) {
+        self.locationController.setRelated(locationController)
     }
     
     func calendarView(calendarView: TSQCalendarView, shouldSelectDate date: NSDate) -> Bool {

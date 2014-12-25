@@ -514,12 +514,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "radiohere/VenuesController.swift"
-            timestampString = "441231507.628236"
+            timestampString = "441237509.639322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -530,12 +530,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "radiohere/VenuesController.swift"
-            timestampString = "441231507.628236"
+            timestampString = "441237509.639322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -626,12 +626,162 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "radiohere/LocationController.swift"
-            timestampString = "441232715.053294"
+            timestampString = "441237548.310669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "getMusicScene()"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "acceptLocation(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "radiohere/LocationController.swift"
+            timestampString = "441233884.999894"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "LocationController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "radiohere.LocationController.__deallocating_deinit"
+                  moduleName = "radiohere"
+                  urlString = "file:///Users/spencerward/dev/code/spencer/rx/radiohere-ios/swift/radiohere/radiohere/LocationController.swift"
+                  timestampString = "441233885.011811"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc radiohere.LocationController.__ivar_destroyer"
+                  moduleName = "radiohere"
+                  urlString = "file:///Users/spencerward/dev/code/spencer/rx/radiohere-ios/swift/radiohere/radiohere/LocationController.swift"
+                  timestampString = "441233885.01201"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "radiohere/LocationController.swift"
+            timestampString = "441233900.904656"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "LocationController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "radiohere.LocationController.okButton.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIButton&gt;"
+                  moduleName = "radiohere"
+                  urlString = "file:///Users/spencerward/dev/code/spencer/rx/radiohere-ios/swift/radiohere/radiohere/LocationController.swift"
+                  timestampString = "441235234.087602"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "radiohere.LocationController.okButton.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIButton&gt;"
+                  moduleName = "radiohere"
+                  urlString = "file:///Users/spencerward/dev/code/spencer/rx/radiohere-ios/swift/radiohere/radiohere/LocationController.swift"
+                  timestampString = "441235234.087785"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "radiohere.LocationController.init (radiohere.LocationController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; radiohere.LocationController"
+                  moduleName = "radiohere"
+                  urlString = "file:///Users/spencerward/dev/code/spencer/rx/radiohere-ios/swift/radiohere/radiohere/LocationController.swift"
+                  timestampString = "441235234.088106"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "237">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "radiohere.LocationController.init (radiohere.LocationController.Type)() -&gt; radiohere.LocationController"
+                  moduleName = "radiohere"
+                  urlString = "file:///Users/spencerward/dev/code/spencer/rx/radiohere-ios/swift/radiohere/radiohere/LocationController.swift"
+                  timestampString = "441235234.088238"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "222">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "radiohere.LocationController.init (radiohere.LocationController.Type)(coder : ObjectiveC.NSCoder) -&gt; radiohere.LocationController"
+                  moduleName = "radiohere"
+                  urlString = "file:///Users/spencerward/dev/code/spencer/rx/radiohere-ios/swift/radiohere/radiohere/LocationController.swift"
+                  timestampString = "441235234.088367"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "233">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "radiohere/VenuesController.swift"
+            timestampString = "441236380.160377"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "onClickDates(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

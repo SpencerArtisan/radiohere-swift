@@ -13,14 +13,15 @@ class VenuesController: UITableViewController {
     var locationController = LocationController()
     var helper: ControllerHelper?
     
-    func setLocationController(locationController: LocationController) {
-        self.locationController = locationController
-    }
-    
     @IBAction func onClickDates(sender: AnyObject) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.navigationController?.popViewControllerAnimated(true)
+        (self.navigationController?.topViewController as GigCalendarController).setRelatedLocationController(locationController)
     }
     
+    func setRelatedLocationController(locationController: LocationController) {
+        self.locationController.setRelated(locationController)
+    }
+
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -49,6 +50,7 @@ class VenuesController: UITableViewController {
     
     func initLocationBar() {
         helper?.showTopBar("LocationView", owner: locationController)
+        locationController.updateLabel()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
