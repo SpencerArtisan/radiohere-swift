@@ -20,6 +20,10 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
         self.navigationController?.pushViewController(gigListController, animated: true)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        navigationController?.toolbarHidden = false
+    }
+
     func setRelatedLocationController(locationController: LocationController) {
         self.locationController.setRelated(locationController)
     }

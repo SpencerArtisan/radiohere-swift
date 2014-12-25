@@ -25,6 +25,10 @@ class SongkickViewController: UIViewController {
         return true
     }
 
+    override func viewDidAppear(animated: Bool) {
+        navigationController?.toolbarHidden = true
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

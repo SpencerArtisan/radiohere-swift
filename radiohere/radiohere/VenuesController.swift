@@ -26,6 +26,10 @@ class VenuesController: UITableViewController {
         return true
     }
 
+    override func viewDidAppear(animated: Bool) {
+        navigationController?.toolbarHidden = false
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         helper = ControllerHelper(controller: self)
@@ -35,7 +39,7 @@ class VenuesController: UITableViewController {
     }
     
     func initTable() {
-        NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("updateTable"), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTable"), userInfo: nil, repeats: true)
     }
     
     func updateTable() {

@@ -77,6 +77,7 @@ class DetailViewController: UITableViewController {
 
     override func viewDidAppear(animated: Bool) {
         navigationController?.toolbarHidden = true
+        playerShown = false
     }
     
     override func viewDidLoad() {
@@ -87,8 +88,6 @@ class DetailViewController: UITableViewController {
         timer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         
         self.view.backgroundColor = UIColor.bond()
-//        self.navigationController?.toolbarHidden = true
-//        self.navigationController?.toolbar.hidden = true
     }
     
     func update() {
