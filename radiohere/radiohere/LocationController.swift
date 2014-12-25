@@ -40,6 +40,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         musicScene = related.musicScene
         here = related.here
         if (locationLabel != nil) {
+            locationLabel.hidden = related.locationLabel.hidden
             locationLabel.text = locationName
         }
     }
@@ -117,6 +118,9 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     
     func updateLabel() {
         locationLabel.text = locationName
+        if (here != nil) {
+            addButton.hidden = false
+        }
     }
     
     func updateLocation() {

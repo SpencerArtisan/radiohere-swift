@@ -3,6 +3,39 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "radiohere.MusicScene.add (radiohere.MusicScene)(radiohere.Gig) -&gt; ():MusicScene.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "gigsByVenue[venue]">
+            </PersistentString>
+            <PersistentString
+               value = "gigsByVenue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "radiohere.ViewController.webSocket (radiohere.ViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SRWebSocket&gt;, didReceiveMessage : Swift.AnyObject) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "artists">
+            </PersistentString>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "radiohere.LocationController.setRelated (radiohere.LocationController)(radiohere.LocationController) -&gt; ():LocationController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "radiohere.LocationController.updateLabel (radiohere.LocationController)() -&gt; ():LocationController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "here == nil">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "radiohere.ViewController.tableView (radiohere.ViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UITableView&gt;, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int:ViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -13,6 +46,14 @@
             </PersistentString>
             <PersistentString
                value = "(Swift.Dictionary&lt;Swift.String, Swift.Array&lt;radiohere.Artist&gt;&gt;)self.tableData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[KalLogic selectedMonthNameAndYear]:KalLogic.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[monthAndYearFormatter stringFromDate:self.baseDate]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -28,21 +69,13 @@
          contextName = "-[KalView addSubviewsToHeaderView:]:KalView.m">
       </ContextState>
       <ContextState
-         contextName = "radiohere.ViewController.webSocket (radiohere.ViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SRWebSocket&gt;, didReceiveMessage : Swift.AnyObject) -&gt; ():ViewController.swift">
+         contextName = "radiohere.GigCalendarController.initCalendar (radiohere.GigCalendarController)() -&gt; ():GigCalendarController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "artists">
+               value = "self.navigationItem.titleView">
             </PersistentString>
             <PersistentString
-               value = "">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ext.radiohere.ObjectiveC.CLLocationManager.startUpdatingLocation (ObjectiveC.CLLocationManager)() -&gt; ():NSDateExt.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.delegate">
+               value = "self.navigationController?.navigationBar">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -55,6 +88,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "ext.radiohere.ObjectiveC.CLLocationManager.startUpdatingLocation (ObjectiveC.CLLocationManager)() -&gt; ():NSDateExt.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.delegate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "radiohere.DetailViewController.playTrack (radiohere.DetailViewController)() -&gt; ():DetailViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -62,36 +103,6 @@
             </PersistentString>
             <PersistentString
                value = "audioPlayer.status">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "radiohere.MusicScene.add (radiohere.MusicScene)(radiohere.Gig) -&gt; ():MusicScene.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "gigsByVenue[venue]">
-            </PersistentString>
-            <PersistentString
-               value = "gigsByVenue">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[KalLogic selectedMonthNameAndYear]:KalLogic.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[monthAndYearFormatter stringFromDate:self.baseDate]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "radiohere.GigCalendarController.initCalendar (radiohere.GigCalendarController)() -&gt; ():GigCalendarController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.navigationItem.titleView">
-            </PersistentString>
-            <PersistentString
-               value = "self.navigationController?.navigationBar">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -21,7 +21,7 @@ class ControllerHelper {
         controller.navigationItem.titleView = view
         controller.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.innocence()]
         controller.navigationController?.navigationBar.barTintColor = UIColor.pachyderm()
-        controller.navigationController?.navigationBar.tintColor = UIColor.innocence()
+        controller.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
     }
     
     func showBottomBar(viewName: String, owner: UIViewController) {
