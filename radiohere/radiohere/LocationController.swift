@@ -78,6 +78,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         var locationString = "\(nameTextBox.text):\(here!.coordinate.latitude),\(here!.coordinate.longitude),5"
         userLocations.append(locationString)
         saveUserLocations()
+        locationIndex = userLocations.count - 1
         onLocationChange()
     }
     
