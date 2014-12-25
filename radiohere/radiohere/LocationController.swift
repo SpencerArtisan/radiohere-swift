@@ -152,6 +152,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         here = locations[0] as CLLocation
+        addButton.hidden = false
     }
     
     func webSocket(webSocket: SRWebSocket!, didFailWithError error: NSError) {
