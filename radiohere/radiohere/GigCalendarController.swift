@@ -15,6 +15,7 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     
     var location: String?
     var locationName: String?
+    var props: NSDictionary?
     var socket: SRWebSocket?
     var musicScene = MusicScene()
     var locationManager = CLLocationManager()
@@ -26,6 +27,7 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var nameTextBox: UITextField!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -41,15 +43,18 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         nameTextBox.hidden = false
         addButton.hidden = true
         okButton.hidden = false
+        nextButton.hidden = true
         nameTextBox.becomeFirstResponder()
     }
     
     @IBAction func acceptLocation(sender: AnyObject) {
         nameTextBox.hidden = true
         addButton.hidden = false
+        nextButton.hidden = false
         okButton.hidden = true
         var locationString = "\(nameTextBox.text):\(here!.coordinate.latitude),\(here!.coordinate.longitude),5"
         userLocations.append(locationString)
+        saveUserLocations()
         onLocationChange()
     }
     
@@ -58,23 +63,49 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
         super.viewDidLoad()
 
         readUserLocations()
-        onLocationChange()
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         initCalendar()
+        onLocationChange()
     }
     
     func readUserLocations() {
-        var path = NSBundle.mainBundle().pathForResource("Data", ofType: "plist")
-        var props = NSDictionary(contentsOfFile: path!)
+        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        var path = paths.stringByAppendingPathComponent("locations.plist")
+        var fileManager = NSFileManager.defaultManager()
+        if (!(fileManager.fileExistsAtPath(path))) {
+            var bundle : NSString = NSBundle.mainBundle().pathForResource("Data", ofType: "plist")!
+            fileManager.copyItemAtPath(bundle, toPath: path, error:nil)
+        }
+        
+//        data.setObject(object, forKey: "object")
+//        data.writeToFile(path, atomically: true)
+        
+        
+//        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+//        var path = paths.stringByAppendingPathComponent("locations.plist")
+        props = NSDictionary(contentsOfFile: path)?.mutableCopy() as NSDictionary
+        
+        
+//        var path = NSBundle.mainBundle().pathForResource("Data", ofType: "plist")
+//        var props = NSDictionary(contentsOfFile: path!)
         userLocations = props?.valueForKey("Locations") as [String]
     }
     
+    func saveUserLocations() {
+        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        var path = paths.stringByAppendingPathComponent("locations.plist")
+        props?.setValue(userLocations, forKey: "Locations")
+        props?.writeToFile(path, atomically: true)
+    }
+    
+
     func onLocationChange() {
         musicScene = MusicScene()
         updateLocation()
         closeWebSocket()
         openWebSocket()
+        locationLabel.text = locationName
     }
     
     func updateLocation() {
@@ -163,7 +194,6 @@ class GigCalendarController: UIViewController, SRWebSocketDelegate, TSQCalendarV
     func webSocketDidOpen(socket: SRWebSocket!) {
         println("Socket Open!")
         socket.send(location)
-        locationLabel.text = locationName
         var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateTable"), userInfo: nil, repeats: true)
     }
     

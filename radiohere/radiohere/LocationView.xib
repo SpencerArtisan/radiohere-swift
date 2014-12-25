@@ -9,6 +9,7 @@
                 <outlet property="addButton" destination="7Pl-f5-hWM" id="6Pv-OT-5Oz"/>
                 <outlet property="locationLabel" destination="a8L-VG-42S" id="cny-Vp-ibp"/>
                 <outlet property="nameTextBox" destination="cDp-r4-bPN" id="Z8y-iY-5v5"/>
+                <outlet property="nextButton" destination="hFz-fE-BPI" id="nej-FC-LP8"/>
                 <outlet property="okButton" destination="VUc-4S-6Zw" id="zLJ-e6-FmB"/>
             </connections>
         </placeholder>
