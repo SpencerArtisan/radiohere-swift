@@ -16,7 +16,7 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
     
     @IBAction func onClickVenue(sender: AnyObject) {
         let gigListController = self.storyboard?.instantiateViewControllerWithIdentifier("VenuesController") as VenuesController
-        gigListController.musicScene = locationController.musicScene
+        gigListController.setLocationController(locationController)
         self.navigationController?.pushViewController(gigListController, animated: true)
     }
     

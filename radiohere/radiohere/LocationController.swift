@@ -16,9 +16,9 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
 
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var okButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var nameTextBox: UITextField!
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var nextButton: UIButton!
 
     var location: String?
     var locationName: String?
@@ -34,7 +34,6 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         onLocationChange()
-        locationLabel.textColor = UIColor.innocence()
     }
 
     @IBAction func nextLocation(sender: AnyObject) {
