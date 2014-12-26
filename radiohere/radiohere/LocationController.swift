@@ -14,6 +14,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
    
     var socket: SRWebSocket?
 
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
@@ -60,8 +61,10 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     @IBAction func deleteLocation(sender: AnyObject) {
         userLocations.removeAtIndex(locationIndex)
         saveUserLocations()
-        locationIndex--
-        onLocationChange()        
+        if locationIndex > 0 {
+            locationIndex--
+        }
+        onLocationChange()
     }
     
     @IBAction func addLocation(sender: AnyObject) {
@@ -121,6 +124,9 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         closeWebSocket()
         openWebSocket()
         updateLabel()
+        if (userLocations.count < 2) {
+            deleteButton.hidden = true
+        }
     }
     
     func updateLabel() {
