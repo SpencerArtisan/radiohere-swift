@@ -17,6 +17,7 @@
 		9728CB7F1972EC0700B76241 /* media-fast-forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728CB7E1972EC0700B76241 /* media-fast-forward.png */; };
 		973557A51A4C77FD00DD8FEA /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973557A41A4C77FD00DD8FEA /* LocationController.swift */; };
 		973557A71A4C8F6900DD8FEA /* ControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973557A61A4C8F6900DD8FEA /* ControllerHelper.swift */; };
+		9736B7D21A4D787A00AA7639 /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 9736B7D11A4D787A00AA7639 /* trash.png */; };
 		975558A71A4B3378000F25BF /* LocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975558A61A4B3378000F25BF /* LocationView.xib */; };
 		975558AB1A4B5525000F25BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975558AA1A4B5525000F25BF /* CoreLocation.framework */; };
 		9765D152197053FD00ECD5A2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D151197053FD00ECD5A2 /* DetailViewController.swift */; };
@@ -81,6 +82,7 @@
 		9728CB7E1972EC0700B76241 /* media-fast-forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "media-fast-forward.png"; sourceTree = "<group>"; };
 		973557A41A4C77FD00DD8FEA /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		973557A61A4C8F6900DD8FEA /* ControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerHelper.swift; sourceTree = "<group>"; };
+		9736B7D11A4D787A00AA7639 /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash.png; sourceTree = "<group>"; };
 		975558A61A4B3378000F25BF /* LocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView.xib; sourceTree = "<group>"; };
 		975558AA1A4B5525000F25BF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9765D151197053FD00ECD5A2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		977A7D81194D7C7600EBE53A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9736B7D11A4D787A00AA7639 /* trash.png */,
 				977A7D8A194D7C7600EBE53A /* Images.xcassets */,
 				972881C71A488E4B00775AC4 /* calendar-128.png */,
 				979D1B3F1A485DB500241C33 /* play8.png */,
@@ -377,6 +380,7 @@
 				977A7D8B194D7C7600EBE53A /* Images.xcassets in Resources */,
 				9765D19419727E2900ECD5A2 /* Hungama-Free-Music-Videos-Radio-1-120x120.jpg in Resources */,
 				97DCCA3B1A49CFBA001B691B /* VenueMode.xib in Resources */,
+				9736B7D21A4D787A00AA7639 /* trash.png in Resources */,
 				97C254F9197B25FD00B1A8F1 /* songkick4.jpg in Resources */,
 				97C254FB197B265200B1A8F1 /* songkick5.jpg in Resources */,
 				972881C81A488E4B00775AC4 /* calendar-128.png in Resources */,

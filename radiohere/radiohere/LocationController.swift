@@ -57,6 +57,13 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         onLocationChange()
     }
     
+    @IBAction func deleteLocation(sender: AnyObject) {
+        userLocations.removeAtIndex(locationIndex)
+        saveUserLocations()
+        locationIndex--
+        onLocationChange()        
+    }
+    
     @IBAction func addLocation(sender: AnyObject) {
         nameTextBox.text = ""
         nameTextBox.hidden = false
