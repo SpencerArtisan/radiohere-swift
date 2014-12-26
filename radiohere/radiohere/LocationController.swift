@@ -76,6 +76,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         addButton.hidden = true
         okButton.hidden = false
         nextButton.hidden = true
+        deleteButton.hidden = true
         nameTextBox.becomeFirstResponder()
     }
     
@@ -84,16 +85,18 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     }
     
     @IBAction func acceptLocation(sender: AnyObject) {
-        nameTextBox.resignFirstResponder()
-        nameTextBox.hidden = true
-        addButton.hidden = false
-        okButton.hidden = true
-        nextButton.hidden = false
-        var locationString = "\(nameTextBox.text):\(here!.coordinate.latitude),\(here!.coordinate.longitude),5"
-        userLocations.append(locationString)
-        saveUserLocations()
-        locationIndex = userLocations.count - 1
-        onLocationChange()
+        if (!nameTextBox.text.isEmpty) {
+            nameTextBox.resignFirstResponder()
+            nameTextBox.hidden = true
+            addButton.hidden = false
+            okButton.hidden = true
+            nextButton.hidden = false
+            var locationString = "\(nameTextBox.text):\(here!.coordinate.latitude),\(here!.coordinate.longitude),5"
+            userLocations.append(locationString)
+            saveUserLocations()
+            locationIndex = userLocations.count - 1
+            onLocationChange()
+        }
     }
     
     func getMusicScene() -> MusicScene {
