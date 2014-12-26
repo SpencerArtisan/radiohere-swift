@@ -40,6 +40,9 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         locationManager = related.locationManager
         musicScene = related.musicScene
         here = related.here
+        if (deleteButton != nil) {
+            deleteButton.hidden = related.deleteButton.hidden
+        }
         if (locationLabel != nil) {
             locationLabel.hidden = related.locationLabel.hidden
             locationLabel.text = locationName
@@ -124,9 +127,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         closeWebSocket()
         openWebSocket()
         updateLabel()
-        if (userLocations.count < 2) {
-            deleteButton.hidden = true
-        }
+        deleteButton.hidden = (userLocations.count < 1)
     }
     
     func updateLabel() {
@@ -134,6 +135,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         if (here != nil) {
             addButton.hidden = false
         }
+        deleteButton.hidden = (userLocations.count < 1)
     }
     
     func updateLocation() {
