@@ -51,6 +51,8 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     
     override func viewDidLoad() {
         readUserLocations()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         onLocationChange()
@@ -91,7 +93,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
             addButton.hidden = false
             okButton.hidden = true
             nextButton.hidden = false
-            var locationString = "\(nameTextBox.text):\(here!.coordinate.latitude),\(here!.coordinate.longitude),5"
+            var locationString = "\(nameTextBox.text):\(here!.coordinate.latitude),\(here!.coordinate.longitude),10"
             userLocations.append(locationString)
             saveUserLocations()
             locationIndex = userLocations.count - 1
@@ -176,6 +178,10 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         here = locations[0] as CLLocation
         addButton.hidden = false
     }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    }
+
     
     func webSocket(webSocket: SRWebSocket!, didFailWithError error: NSError) {
         println("Error: \(error.description)")

@@ -31,6 +31,7 @@
 		9765D19519727E2900ECD5A2 /* play80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9765D19319727E2900ECD5A2 /* play80.jpg */; };
 		9765D1991972A33F00ECD5A2 /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9765D1981972A33F00ECD5A2 /* PlayerView.xib */; };
 		9765D19B1972C1AE00ECD5A2 /* PlaylistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D19A1972C1AE00ECD5A2 /* PlaylistController.swift */; };
+		9776AC051A5186C000A4CAAB /* radiohereinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9776AC041A5186C000A4CAAB /* radiohereinfo.plist */; };
 		977A7D84194D7C7600EBE53A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977A7D83194D7C7600EBE53A /* AppDelegate.swift */; };
 		977A7D8B194D7C7600EBE53A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 977A7D8A194D7C7600EBE53A /* Images.xcassets */; };
 		977A7D97194D7C7600EBE53A /* radiohereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977A7D96194D7C7600EBE53A /* radiohereTests.swift */; };
@@ -102,6 +103,7 @@
 		9765D19319727E2900ECD5A2 /* play80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play80.jpg; sourceTree = "<group>"; };
 		9765D1981972A33F00ECD5A2 /* PlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
 		9765D19A1972C1AE00ECD5A2 /* PlaylistController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistController.swift; sourceTree = "<group>"; };
+		9776AC041A5186C000A4CAAB /* radiohereinfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = radiohereinfo.plist; sourceTree = "<group>"; };
 		977A7D7E194D7C7600EBE53A /* radiohere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radiohere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		977A7D82194D7C7600EBE53A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		977A7D83194D7C7600EBE53A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		977A7D81194D7C7600EBE53A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9776AC041A5186C000A4CAAB /* radiohereinfo.plist */,
 				9736B7D11A4D787A00AA7639 /* trash.png */,
 				977A7D8A194D7C7600EBE53A /* Images.xcassets */,
 				972881C71A488E4B00775AC4 /* calendar-128.png */,
@@ -369,6 +372,7 @@
 			files = (
 				97C254F7197B229500B1A8F1 /* songkick3.jpg in Resources */,
 				97C254F3197B21AF00B1A8F1 /* songkick.jpg in Resources */,
+				9776AC051A5186C000A4CAAB /* radiohereinfo.plist in Resources */,
 				975558A71A4B3378000F25BF /* LocationView.xib in Resources */,
 				9765D1541970540400ECD5A2 /* Main.storyboard in Resources */,
 				972881C61A488E2A00775AC4 /* location.png in Resources */,

@@ -30,7 +30,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yeate Street" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8L-VG-42S">
-                    <rect key="frame" x="51" y="8" width="228" height="24"/>
+                    <rect key="frame" x="51" y="8" width="221" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.81568628549575806" green="0.76470589637756348" blue="0.63921570777893066" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
