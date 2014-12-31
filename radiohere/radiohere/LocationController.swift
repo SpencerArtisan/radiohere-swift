@@ -14,6 +14,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
    
     var socket: SRWebSocket?
 
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var okButton: UIButton!
@@ -74,12 +75,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     
     @IBAction func addLocation(sender: AnyObject) {
         nameTextBox.text = ""
-        nameTextBox.hidden = false
-        addButton.hidden = true
-        okButton.hidden = false
-        nextButton.hidden = true
-        deleteButton.hidden = true
-        nameTextBox.becomeFirstResponder()
+        editMode(true)
     }
     
     @IBAction func hitEnter(sender: AnyObject) {
@@ -88,16 +84,30 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     
     @IBAction func acceptLocation(sender: AnyObject) {
         if (!nameTextBox.text.isEmpty) {
-            nameTextBox.resignFirstResponder()
-            nameTextBox.hidden = true
-            addButton.hidden = false
-            okButton.hidden = true
-            nextButton.hidden = false
+            editMode(false)
             var locationString = "\(nameTextBox.text):\(here!.coordinate.latitude),\(here!.coordinate.longitude),10"
             userLocations.append(locationString)
             saveUserLocations()
             locationIndex = userLocations.count - 1
             onLocationChange()
+        }
+    }
+
+    @IBAction func cancelAddLocation(sender: AnyObject) {
+        editMode(false)
+    }
+    
+    func editMode(isEditMode: Bool) {
+        nameTextBox.hidden = !isEditMode
+        addButton.hidden = isEditMode
+        okButton.hidden = !isEditMode
+        nextButton.hidden = isEditMode
+        deleteButton.hidden = isEditMode
+        cancelButton.hidden = !isEditMode
+        if (isEditMode) {
+            nameTextBox.becomeFirstResponder()
+        } else {
+            nameTextBox.resignFirstResponder()
         }
     }
     

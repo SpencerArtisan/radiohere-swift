@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationController" customModule="radiohere" customModuleProvider="target">
             <connections>
                 <outlet property="addButton" destination="7Pl-f5-hWM" id="6Pv-OT-5Oz"/>
+                <outlet property="cancelButton" destination="Nnv-CK-g3t" id="wd2-J3-uyQ"/>
                 <outlet property="deleteButton" destination="2wo-pM-Yi8" id="Aze-XO-NaP"/>
                 <outlet property="locationLabel" destination="a8L-VG-42S" id="cny-Vp-ibp"/>
                 <outlet property="nameTextBox" destination="cDp-r4-bPN" id="Z8y-iY-5v5"/>
@@ -72,12 +73,22 @@
                         <action selector="deleteLocation:" destination="-1" eventType="touchUpInside" id="cy8-15-gi0"/>
                     </connections>
                 </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnv-CK-g3t" userLabel="cancelButton">
+                    <rect key="frame" x="239" y="8" width="16" height="22"/>
+                    <state key="normal" image="cancel.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelAddLocation:" destination="-1" eventType="touchUpInside" id="jpY-Nl-gNH"/>
+                    </connections>
+                </button>
             </subviews>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="242" y="69"/>
+            <point key="canvasLocation" x="-110" y="6"/>
         </view>
     </objects>
     <resources>
+        <image name="cancel.png" width="12" height="12"/>
         <image name="trash.png" width="26" height="26"/>
     </resources>
 </document>
