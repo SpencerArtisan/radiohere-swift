@@ -22,7 +22,7 @@ class Venue : NSObject {
     }
     
     override func isEqual(anObject: AnyObject?) -> Bool {
-        return anObject is Venue && (anObject as Venue).name == name
+        return anObject is Venue && (anObject as! Venue).name == name
     }
     
     func hashValue() -> Int {

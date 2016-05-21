@@ -17,7 +17,7 @@ class SongkickViewController: UIViewController {
         super.viewDidLoad()
         webView?.backgroundColor = UIColor(patternImage: UIImage(named:"songkick6.jpg")!)
         self.automaticallyAdjustsScrollViewInsets = false
-        var request = NSURLRequest(URL: NSURL(string:url!)!)
+        let request = NSURLRequest(URL: NSURL(string:url!)!)
         webView?.loadRequest(request)
     }
 

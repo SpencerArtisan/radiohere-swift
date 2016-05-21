@@ -15,7 +15,7 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
     var helper: ControllerHelper?
     
     @IBAction func onClickVenue(sender: AnyObject) {
-        let gigListController = self.storyboard?.instantiateViewControllerWithIdentifier("VenuesController") as VenuesController
+        let gigListController = self.storyboard?.instantiateViewControllerWithIdentifier("VenuesController") as! VenuesController
         gigListController.setRelatedLocationController(locationController)
         self.navigationController?.pushViewController(gigListController, animated: true)
     }
@@ -33,7 +33,7 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
     }
 
     func calendarView(calendarView: TSQCalendarView, didSelectDate date: NSDate) {
-        let gigListController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
+        let gigListController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         gigListController.gigs = locationController.getMusicScene().getGigsOn(date)
         gigListController.showByDate(date.format("EEE dd MMM"))
         self.navigationController?.pushViewController(gigListController, animated: true)
@@ -53,7 +53,7 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
     }
     
     func initCalendar() {
-        var calendar = TSQCalendarView()
+        let calendar = TSQCalendarView()
         calendar.firstDate = NSDate()
         calendar.lastDate = NSDate().addMonth(1)
         calendar.selectedDate = nil
@@ -65,7 +65,7 @@ class GigCalendarController: UIViewController, TSQCalendarViewDelegate {
     }
 
     func updateCalendar() {
-        (self.view as TSQCalendarView).tableView.reloadData()
+        (self.view as! TSQCalendarView).tableView.reloadData()
     }
     
     func initModeBar() {

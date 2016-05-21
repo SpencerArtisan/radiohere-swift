@@ -13,28 +13,28 @@ class Gig {
     
     init(jsonText: NSString) {
         var data = jsonText.dataUsingEncoding(NSUTF8StringEncoding);
-        json = NSJSONSerialization.JSONObjectWithData(data!, options:    NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+        json = try! NSJSONSerialization.JSONObjectWithData(data!, options:    NSJSONReadingOptions.MutableContainers) as! NSDictionary
     }
     
     func artist() -> String {
-        return json["artist"] as String
+        return json["artist"] as! String
     }
     
     func songkickUrl() -> String {
-        return json["songkickUrl"] as String
+        return json["songkickUrl"] as! String
     }
     
     func venue() -> String {
-        return json["venueName"] as String
+        return json["venueName"] as! String
     }
     
     func distance() -> String {
-        var distance = json["distance"] as Float
-        return NSString(format: "%.1f", distance)
+        var distance = json["distance"] as! Float
+        return NSString(format: "%.1f", distance) as String
     }
     
     func nsDate() -> NSDate {
-        var dateString = json["date"] as String
+        var dateString = json["date"] as! String
         return NSDate(dateString: dateString)
     }
 
@@ -47,6 +47,6 @@ class Gig {
     }
     
     func tracks() -> Array<Track> {
-        return (json["tracks"] as Array).map { Track(json: $0) }
+        return (json["tracks"] as! Array).map { Track(json: $0) }
     }
 }

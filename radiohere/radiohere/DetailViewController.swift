@@ -26,7 +26,7 @@ class DetailViewController: UITableViewController {
     var gigs: [Gig] = []
     
     @IBAction func touchTickets(sender: AnyObject) {
-        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SongkickViewController") as SongkickViewController
+        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SongkickViewController") as! SongkickViewController
         secondViewController.url = selected?.songkickUrl()
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
@@ -65,7 +65,7 @@ class DetailViewController: UITableViewController {
         var url = selected!.tracks()[trackIndex].streamUrl()
         audioPlayer = AVPlayer(URL: url)
         audioPlayer.play()
-        songTitle?.text = selected!.tracks()[trackIndex].name()
+        songTitle?.text = selected!.tracks()[trackIndex].name() as String
         songTitle?.textColor = UIColor.innocence()
         nextTrack?.hidden = false
         tickets?.hidden = false
@@ -91,13 +91,13 @@ class DetailViewController: UITableViewController {
     }
     
     func update() {
-        let selected = self.tableView.indexPathForSelectedRow()
+        let selected = self.tableView.indexPathForSelectedRow
         self.tableView.reloadData()
         self.tableView.selectRowAtIndexPath(selected, animated: false, scrollPosition: UITableViewScrollPosition.None)
     }
     
     override func viewDidDisappear(animated: Bool) {
-        println("KILLING DETAIL VIEW \(self)")
+        print("KILLING DETAIL VIEW \(self)")
         audioPlayer.pause()
     }
 
@@ -119,7 +119,7 @@ class DetailViewController: UITableViewController {
         let gig = gigs[indexPath.row] as Gig
         cell.textLabel?.text = gig.artist()
         cell.textLabel?.textColor = UIColor.pachyderm()
-        cell.detailTextLabel?.textColor = UIColor.pachyderm(a: 0.8)
+        cell.detailTextLabel?.textColor = UIColor.pachyderm(0.8)
         cell.backgroundColor = UIColor.bond()
         if byVenue {
             cell.detailTextLabel?.text = "\(gig.date())"

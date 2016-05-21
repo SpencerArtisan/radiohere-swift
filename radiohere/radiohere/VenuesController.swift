@@ -15,7 +15,7 @@ class VenuesController: UITableViewController {
     
     @IBAction func onClickDates(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
-        (self.navigationController?.topViewController as GigCalendarController).setRelatedLocationController(locationController)
+        (self.navigationController?.topViewController as! GigCalendarController).setRelatedLocationController(locationController)
     }
     
     func setRelatedLocationController(locationController: LocationController) {
@@ -43,7 +43,7 @@ class VenuesController: UITableViewController {
     }
     
     func updateTable() {
-        let selected = self.tableView.indexPathForSelectedRow()
+        let selected = self.tableView.indexPathForSelectedRow
         self.tableView.reloadData()
     }
     
@@ -77,7 +77,7 @@ class VenuesController: UITableViewController {
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         var cell = tableView.cellForRowAtIndexPath(indexPath)!
         var venue = cell.textLabel?.text?.componentsSeparatedByString(" (")[0]
-        let gigListController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
+        let gigListController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         gigListController.gigs = locationController.getMusicScene().getGigsAt(venue!)
         gigListController.showByVenue(venue!)
         self.navigationController?.pushViewController(gigListController, animated: true)

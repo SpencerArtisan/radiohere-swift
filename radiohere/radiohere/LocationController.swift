@@ -83,9 +83,9 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     }
     
     @IBAction func acceptLocation(sender: AnyObject) {
-        if (!nameTextBox.text.isEmpty) {
+        if (!nameTextBox.text!.isEmpty) {
             editMode(false)
-            var locationString = "\(nameTextBox.text):\(here!.coordinate.latitude),\(here!.coordinate.longitude),10"
+            var locationString = "\(nameTextBox.text!):\(here!.coordinate.latitude),\(here!.coordinate.longitude),10"
             userLocations.append(locationString)
             saveUserLocations()
             locationIndex = userLocations.count - 1
@@ -116,22 +116,22 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     }
     
     func readUserLocations() {
-        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
         var path = paths.stringByAppendingPathComponent("locations.plist")
         var fileManager = NSFileManager.defaultManager()
         if (!(fileManager.fileExistsAtPath(path))) {
             var bundle : NSString = NSBundle.mainBundle().pathForResource("Data", ofType: "plist")!
-            fileManager.copyItemAtPath(bundle, toPath: path, error:nil)
+            try! fileManager.copyItemAtPath(bundle as String, toPath: path as String)
         }
         
-        props = NSDictionary(contentsOfFile: path)?.mutableCopy() as NSDictionary
+        props = NSDictionary(contentsOfFile: path)?.mutableCopy() as! NSDictionary
         
-        userLocations = props?.valueForKey("Locations") as [String]
+        userLocations = props?.valueForKey("Locations") as! [String]
     }
     
     func saveUserLocations() {
-        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        var path = paths.stringByAppendingPathComponent("locations.plist")
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+        let path = paths.stringByAppendingPathComponent("locations.plist")
         props?.setValue(userLocations, forKey: "Locations")
         props?.writeToFile(path, atomically: true)
     }
@@ -154,7 +154,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     }
     
     func updateLocation() {
-        var locationDetails = userLocations[locationIndex]
+        let locationDetails = userLocations[locationIndex]
         let split = locationDetails.rangeOfString(":")!.startIndex
         let name: String = locationDetails.substringWithRange(Range<String.Index>(start: locationDetails.startIndex, end: split))
         location = locationDetails.substringWithRange(Range<String.Index>(start: split.successor(), end: locationDetails.endIndex))
@@ -174,7 +174,7 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
     }
     
     func webSocketDidOpen(socket: SRWebSocket!) {
-        println("Socket Open!")
+        print("Socket Open!")
         socket.send(location)
     }
     
@@ -184,21 +184,21 @@ class LocationController: UIViewController, SRWebSocketDelegate, CLLocationManag
         objc_sync_exit(self)
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         here = locations[0] as CLLocation
         addButton.hidden = false
     }
     
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
     }
 
     
     func webSocket(webSocket: SRWebSocket!, didFailWithError error: NSError) {
-        println("Error: \(error.description)")
+        print("Error: \(error.description)")
     }
     
     func webSocket(webSocket: SRWebSocket!, didCloseWithCode code: NSInteger, reason: NSString) {
-        println("Close")
+        print("Close")
     }
 
 }

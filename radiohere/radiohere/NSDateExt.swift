@@ -69,11 +69,11 @@ extension NSDate {
     
     func add(components: NSDateComponents) -> NSDate {
         let cal = NSCalendar.currentCalendar()
-        return cal.dateByAddingComponents(components, toDate: self, options: nil)!
+        return cal.dateByAddingComponents(components, toDate: self, options: [])!
     }
     
     func addMonth(months: NSInteger) -> NSDate {
-        var components = NSDateComponents()
+        let components = NSDateComponents()
         components.month = months
         return self.add(components)
     }
@@ -115,43 +115,43 @@ func - (left: NSDate, right:NSDateComponents) -> NSDate {
 extension Int {
     
     func seconds() -> NSDateComponents {
-        var components = NSDateComponents()
+        let components = NSDateComponents()
         components.second = self
         return components
     }
     
     func minutes() -> NSDateComponents {
-        var components = NSDateComponents()
+        let components = NSDateComponents()
         components.minute = self
         return components
     }
     
     func hour() -> NSDateComponents {
-        var components = NSDateComponents()
+        let components = NSDateComponents()
         components.hour = self
         return components
     }
     
     func days() -> NSDateComponents {
-        var components = NSDateComponents()
+        let components = NSDateComponents()
         components.day = self
         return components
     }
     
     func weeks() -> NSDateComponents {
-        var components = NSDateComponents()
+        let components = NSDateComponents()
         components.weekOfYear = self
         return components
     }
     
     func month() -> NSDateComponents {
-        var components = NSDateComponents()
+        let components = NSDateComponents()
         components.month = self
         return components
     }
     
     func years() -> NSDateComponents {
-        var components = NSDateComponents()
+        let components = NSDateComponents()
         components.year = self
         return components
     }

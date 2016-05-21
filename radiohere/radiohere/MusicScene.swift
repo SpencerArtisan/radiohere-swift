@@ -29,7 +29,7 @@ class MusicScene {
                 gigsByDate[gig.nsDate()] = gigs
             }
 
-            var venue = Venue(gig: gig as Gig)
+            let venue = Venue(gig: gig as Gig)
             if (gigsByVenue[venue] != nil) {
                 gigs = gigsByVenue[venue]!
                 gigs.addObject(gig)
@@ -47,11 +47,11 @@ class MusicScene {
     }
     
     func getGigsOn(date: NSDate) -> [Gig] {
-        return self.gigsByDate[date]! as AnyObject as [Gig]
+        return self.gigsByDate[date]! as AnyObject as! [Gig]
     }
     
     func getGigsAt(venue: Venue) -> [Gig] {
-        var gigs = self.gigsByVenue[venue]! as AnyObject as [Gig]
+        var gigs = self.gigsByVenue[venue]! as AnyObject as! [Gig]
         gigs.sort { (a:Gig, b:Gig) -> Bool in
             return a.nsDate().compare(b.nsDate()) == NSComparisonResult.OrderedAscending
         }
@@ -63,8 +63,8 @@ class MusicScene {
     }
     
     func getVenues() -> [Venue] {
-        var venues = self.gigsByVenue.keys.array
-        venues.sort({ (a:Venue, b:Venue) -> Bool in
+        var venues = Array(self.gigsByVenue.keys)
+        venues.sortInPlace({ (a:Venue, b:Venue) -> Bool in
             return (a.distance as NSString).floatValue < (b.distance as NSString).floatValue
         })
         return venues
